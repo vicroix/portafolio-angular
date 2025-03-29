@@ -2,10 +2,10 @@ import { Component, Input, Output} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { RatonComponent } from './raton/raton.component';
 import { MidescripcionComponent } from './midescripcion/midescripcion.component';
-import { NavbarComponent } from './nav-bar/nav-bar.component';
 import { MishabilidadesComponent } from './mishabilidades/mishabilidades.component';
 import { FooterComponent } from './footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from './nav-bar/navbar.component';
 
 
 

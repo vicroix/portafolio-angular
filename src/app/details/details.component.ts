@@ -28,7 +28,7 @@ export class DetailsComponent implements OnInit {
   }
 
   cargarProyecto(id: string | null): void {
-    this.http.get<any[]>('../../assets/proyectos.json').subscribe((proyectos) => {
+    this.http.get<any[]>('/assets/proyectos.json').subscribe((proyectos) => {
       this.proyecto = proyectos.find((p) => p.id === id);
     });
   }
