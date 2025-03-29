@@ -1,0 +1,185 @@
+[
+  {
+    "id": "1",
+    "titulo": "Monopoly en java",
+    "descripcion": [
+      {
+        "tipo": "titulo",
+        "contenido": "Descripción breve"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Versión del clásico juego de monopoly, implementado en Java utilizando la interfaz gráfica de Swing"
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Técnologias usadas"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Java",
+          "Netbeans",
+          "Swing"
+        ]
+      },
+      {
+       "tipo": "titulo",
+        "contenido": "Objetivo"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Este proyecto fue desarrollado para profundizar en los fundamentos de Java, con especial énfasis en la rogramación orientada a objetos. Utilicé NetBeans como entorno de desarrollo y Swing para la creación de la interfaz gráfica de usuario (GUI). \nAunque me enfrenté a varios desafíos a lo largo del proceso, cada uno de ellos me han ayudado a fortalecer mis habilidades tanto en Java como en la resolución de problemas. Esta experiencia me brindó una comprensión más sólida de la estructura y la lógica detrás de las aplicaciones de escritorio en Java.."
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Características del juego"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Tablero de 5x5",
+          "1 vs 1",
+          "Empiezan con 100 monedas",
+          "Las casillas tienen un valor de 60 monedas. Cuando un jugador cae en una casilla, evalua si no tiene propietario, si no tiene, se le habilitara el botón de comprar, si no, permanecerá deshabilitado",
+          "Si un jugador cae en la casilla del oponente, se le restara 20 monedas y se le suma al oponente",
+          "Las casillas violetas que tienen una imagen de 3 cartas son de suerte y tienen 3 posibilidades: sumar 20 monedas, sumar 10 monedas o restar 20 monedas",
+          "La casilla de cárcel tiene una penalización de 2 turnos",
+          "La casilla amarilla que corresponde a la banca te quitan 20 monedas"
+        ]
+      }
+    ],
+    "imagen": "Megapoly.jpg",
+    "enlace": "https://github.com/vicroix/monopoly"
+  },
+  {
+    "id": "2",
+    "titulo": "Página web",
+    "descripcion": [
+      {
+        "tipo": "titulo",
+        "contenido": "Detalles del Proyecto"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Página web para tienda virtual con autentificación que accede a base de datos usando sentencias SQL, javascript y php"
+
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Características"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "JavaScript",
+          "HTML5",
+          "CSS3",
+          "PHP",
+          "SQL",
+          "ldap",
+          "Apache"
+        ],
+        "clases": "list-disc list-inside space-y-2 text-lg"
+      }
+    ],
+    "imagen": "inicioMipag.jpg",
+    "enlace": "https://github.com/vicroix/Trabajo_Desarrollo_Servidores"
+  },
+  {
+    "id": "3",
+    "titulo": "Aplicación CRUD de Pokemon con Angular y Node.js",
+    "descripcion": [
+      {
+        "tipo": "titulo",
+        "contenido": "Detalles del Proyecto"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Este proyecto es una aplicación web que permite gestionar una lista de Pokemon, implementando una API REST con Node.js y Express, y un cliente en Angular para interactuar con la API"
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Características"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Backend: Node.js, Express.js",
+          "Frontend: Angular 19, TypeScript",
+          "Estilizado: Tailwind CSS",
+          "Comunicación HTTP: Angular HttpClient"
+        ],
+        "clases": "list-disc list-inside space-y-2 text-lg"
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Funcionalidades implementadas"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Obtener lista de Pokemon: Listado paginado de Pokemon con limit y offset.",
+          "Ver detalles de un Pokemon: Seleccionar un elemento de la lista para ver su ID, nombre, tipo.",
+          "Actualizar Pokemon: Modificar el nombre o tipo de un Pokemon existente mediante un formulario.",
+          "Eliminar Pokemon: Solo implementado en el backend por ahora, no lo vi en este caso tan necesario."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "API REST"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "GET /api/pokemons: Obtener lista completa o paginada.",
+          "GET /api/pokemons/id: Obtener los detalles de un Pokemon por su ID",
+          "PUT /api/pokemons/id: Modificar los datos de un Pokemon",
+          "DELETE /api/pokemons/id: Elimina un Pokemon por su ID"
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Cliente Angular"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Servicio (pokemon.service.ts): Gestiona las peticiones HTTP hacia la API.",
+          "Componente (pokemon-list.component.ts): Renderiza la lista de Pokemon y permite seleccionar o modificar elementos.",
+          "HTML y estilos: Interfaz sencilla y responsiva con Tailwind para mostrar y modificar los datos"
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Aprendizaje clave"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Configuración de un servidor REST con Express.js.",
+          "Manejo de peticiones HTTP con Angular.",
+          "Implementación de un CRUD completo",
+          "Paginación y gestión de estados en Angular"
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Mejoras futuras"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Añadir imágenes de los Pokemon.",
+          "Implementar la eliminación desde el frontend.",
+          "Validaciones de formularios en Angular"
+        ]
+      }
+    ],
+    "imagen": "ApiPokemon.jpg",
+    "enlace": "https://github.com/vicroix/Angular_APIREST",
+    "enlace2": "https://github.com/vicroix/mi-api"
+  }
+
+]
+

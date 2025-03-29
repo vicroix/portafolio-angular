@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@tailwind utilities;
+
+@layer utilities {
+    @keyframes wheel-scroll {
+        0% {
+            top: 0.5rem;
+            opacity: 1;
+        }
+        100% {
+            top: 2rem;
+            opacity: 0;
+        }
+    }
+
+    .animate-wheel {
+        animation: wheel-scroll 1.3s infinite;
+    }
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('./assets/fonts/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 25% 100%;
+  font-style: normal;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-45px);
+  }
+}
+
+@keyframes cambioColorFlecha {
+  0%{
+    fill: 0% 50%;
+  }
+  50%{
+    fill: 100% 50%;
+  }
+  100%{
+    fill: 0% 50%;
+  }
+}
+@keyframes cambioColorVolver {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+@keyframes moverFlecha {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+.animate-fade-slide {
+  animation: fadeSlide 2s ease-in-out infinite;
+}
+.group:hover .animate-fade-slide {
+  animation: none;
+}
+
+.cambio-color-flecha{
+  fill: linear-gradient(45deg, rgb(54, 26, 62), rgb(34, 17, 39), rgb(255, 105, 180));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: cambioColorFlecha 2s ease-in-out infinite;
+}
+
+.hover-mover-flecha{
+  animation: moverFlecha 2s ease-in-out infinite;
+}
+
+.cambio-color-volver{
+  background: linear-gradient(45deg, rgb(54, 26, 62), rgb(146, 28, 179), rgb(255, 105, 180));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: cambioColorVolver 3s ease infinite;
+}
+

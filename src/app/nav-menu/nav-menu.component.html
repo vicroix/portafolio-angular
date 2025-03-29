@@ -1,0 +1,68 @@
+<nav class="bg-white rounded-lg">
+  <ul class="flex flex-row align-center justify-center font-bold space-x-5">
+    <li>
+      <a [routerLink]="['/']" class="text-[20px] hover:text-[rgb(154,47,229)] hover:text-shadow-md hover:shadow-blue/90 transition-all duration-300">Inicio</a>
+    </li>
+    <li class="relative group">
+      <a
+        class="text-[20px] cursor-pointer hover:text-[rgb(154,47,229)] group-hover:border-white delay-150">Java</a>
+      <ul
+        class="absolute left-0 mt-5 opacity-0 invisible group-hover:opacity-100 group-hover:shadow-[0_5px_20px_rgba(0,0,0,0.3)] group-hover:visible shadow-md bg-blue-50 rounded-lg shadow-lg transition-all duration-400 delay-150">
+        <li class="text-[16px] block w-40 px-4 py-2 hover:text-[rgb(154,47,229)] rounded-lg shadow-lg"><a [routerLink]="['/details']"
+            [queryParams]="{ title: 'Monopoly', image: 'Megapoly.jpg'}" routerLinkActive="router-link-active">Monopoly</a></li>
+      </ul>
+    </li>
+    <li class="relative group">
+      <a
+        class="text-[20px] cursor-pointer hover:text-[rgb(154,47,229)] group-hover:border-white delay-150">JavaScript</a>
+      <ul
+        class="absolute left-0 mt-5 top-full opacity-0 invisible group-hover:opacity-100 group-hover:shadow-[0_5px_20px_rgba(0,0,0,0.3)] group-hover:visible bg-blue-50 rounded-lg shadow-lg transition-all duration-400">
+        <li class="text-[16px] block w-40 px-4 py-2 hover:text-[rgb(154,47,229)] rounded-lg shadow-lg"><a [routerLink]="['/details']"
+            [queryParams]="{ title: 'Progreso', image: 'image'}">Mi página web</a>
+        </li>
+      </ul>
+    </li>
+    <li class="relative group">
+      <a
+        class="text-[20px] cursor-pointer hover:text-[rgb(154,47,229)] group-hover:border-white delay-150">Angular</a>
+      <ul
+        class="absolute left-0 mt-5 top-full opacity-0 invisible group-hover:opacity-100 group-hover:shadow-[0_5px_20px_rgba(0,0,0,0.3)] group-hover:visible bg-blue-50 rounded-lg shadow-lg transition-all duration-400">
+        <li class="text-[16px]  block w-40 px-4 py-2 hover:text-[rgb(154,47,229)] rounded-lg shadow-lg"><a [routerLink]="['/details']"
+            [queryParams]="{ title: title, image: 'inicioMipag.jpg'}">Mi portafolio</a>
+        </li>
+      </ul>
+    </li>
+    <li class="relative group">
+      <a
+        class="text-[20px] cursor-pointer hover:text-[rgb(154,47,229)] group-hover:border-white delay-150">React</a>
+      <ul
+        class="absolute left-0 mt-5 top-full opacity-0 invisible group-hover:opacity-100 group-hover:shadow-[0_5px_20px_rgba(0,0,0,0.3)] group-hover:visible bg-blue-50 rounded-lg shadow-lg transition-all duration-400">
+        <li class="text-[16px] block w-40 px-4 py-2 hover:text-[rgb(154,47,229)] rounded-lg shadow-lg"><a [routerLink]="['/details']"
+            [queryParams]="{ title: 'Progreso', image: 'image'}">En
+            progreso</a>
+        </li>
+      </ul>
+    </li>
+    <li class="relative group">
+      <a
+        class="text-[20px] cursor-pointer hover:text-[rgb(154,47,229)] group-hover:border-white delay-150">PHP</a>
+      <ul
+        class="absolute left-0 mt-5 top-full opacity-0 invisible group-hover:opacity-100 group-hover:shadow-[0_5px_20px_rgba(0,0,0,0.3)] group-hover:visible bg-blue-50 rounded-lg shadow-lg transition-all duration-400">
+        <li class="text-[16px] block w-40 px-4 py-2 hover:text-[rgb(154,47,229)] rounded-lg shadow-lg"><a [routerLink]="['/details']"
+            [queryParams]="{ title: 'Progreso', image: 'image'}">Mi página web</a>
+        </li>
+      </ul>
+    </li>
+    <li class="relative group">
+      <a
+        class="text-[20px] cursor-pointer hover:text-[rgb(154,47,229)] group-hover:border-white delay-150">SQL</a>
+      <ul
+        class="absolute left-0 mt-5 top-full opacity-0 invisible group-hover:opacity-100 group-hover:shadow-[0_5px_20px_rgba(0,0,0,0.3)] group-hover:visible bg-blue-50 rounded-lg shadow-lg transition-all duration-400">
+        <li class="text-[16px] block w-40 px-4 py-2 hover:text-[rgb(154,47,229)] rounded-lg shadow-lg"><a [routerLink]="['/details']"
+            [queryParams]="{ title: 'Progreso', image: 'image'}">Mi página web</a>
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>

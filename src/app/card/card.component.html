@@ -1,0 +1,10 @@
+<div class="max-w-sm">
+  <div class="items-center justify-center bg-white rounded-2xl shadow-lg shadow-gray-700">
+    <h2 class="text-center font-semibold mb-4 p-4 text-[22px]">{{getTitle}}</h2>
+    <img class="object-contain w-120 h-60" [src]="'img/' + imageSrc" [alt]="getTitle" title="">
+    <a [routerLink]="['details/', id]" class="justify-center flex text-center">
+      <h2 class="py-2 px-4 rounded-xl p-2 shadow-md shadow-gray-500 m-4 w-45 hover:scale-101 hover:bg-[rgb(169,56,243)] bg-[rgb(154,47,229)] text-white font-medium hover:shadow-lg hover:-translate-y-1 transition">Detalles</h2>
+    </a>
+  </div>
+</div>
+
