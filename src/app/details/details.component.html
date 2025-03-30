@@ -1,7 +1,7 @@
 <div class="min-h-screen flex flex-col">
   <!-- Volver al Home -->
-  <div class="translate-x-4/2 translate-y-5/3 w-35 h-10">
-    <a [routerLink]="['']" class="m-4 flex items-center">
+  <div class="translate-y-7/2 translate-x-2/12 sm:translate-x-4/2 sm:translate-y-5/3 w-35 h-5 sm:h-10">
+    <a [routerLink]="['']" class="sm:m-4 flex items-center">
       <!-- Flecha < -->
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="25" viewBox="0 0 48 48"
         class="fill-[rgb(169,56,243)] cambio-color-flecha hover-mover-flecha">
@@ -14,21 +14,21 @@
   </div>
 
   <!-- Título proyecto -->
-  <div class="flex flex-col flex-grow  items-center mt-15">
+  <div class="contenedor-proyecto flex flex-col flex-grow items-center sm:mt-14">
     <div class="h-20">
       <h3 class="text-[24px] font-bold">{{proyecto?.titulo}}</h3>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-1 mb-15">
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-1 mb-5 sm:mb-15">
       <!--Descripción proyecto-->
-      <div class="max-w-[90%] ">
+      <div class="contenedor-detalles max-w-[100%]">
         <div
-          class="mr-5 space-y-3 border-l-8 rounded-lg p-4 shadow-sm shadow-gray-300 bg-white text-ellipsis w-160 break-words">
+          class="border-l-8 rounded-lg p-4 shadow-sm shadow-gray-300 bg-white text-ellipsis sm:mr-5 sm:space-y-3 sm:w-160 break-words">
           <ng-container *ngFor="let elemento of proyecto?.descripcion">
             <ng-container [ngSwitch]="elemento.tipo">
-              <h3 *ngSwitchCase="'titulo'" class="text-xl font-bold">{{ elemento.contenido }}</h3>
-              <p *ngSwitchCase="'parrafo'">{{ elemento.contenido }}</p>
+              <h3 *ngSwitchCase="'titulo'" class="text-xl font-bold titulo-detalles">{{ elemento.contenido }}</h3>
+              <p *ngSwitchCase="'parrafo'" class="texto-detalles">{{ elemento.contenido }}</p>
               <ul *ngSwitchCase="'lista'" class="list-disc pl-6">
-                <li *ngFor="let tecnologias of elemento.contenido">{{ tecnologias }}</li>
+                <li *ngFor="let tecnologias of elemento.contenido" class="lista-detalles">{{ tecnologias }}</li>
               </ul>
             </ng-container>
           </ng-container>
@@ -37,7 +37,7 @@
 
       <!-- Imágen proyecto y link a git -->
       <div class="flex flex-col items-center">
-        <img class="w-160 h-auto max-h-full object-contain shadow-sm" [src]="'assets/img/' + proyecto?.imagen" [alt]="proyecto?.titulo">
+        <img class="imagenes w-160 h-auto max-h-full object-contain shadow-sm" [src]="'assets/img/' + proyecto?.imagen" [alt]="proyecto?.titulo">
         <a [href]="proyecto?.enlace"
           [ngClass]="botonGit1" [title]="proyecto?.enlace">
           <p class="flex justify-center items-center pr-2 text-white">Ir a </p>
@@ -63,6 +63,5 @@
          </ng-container>
       </div>
     </div>
-
   </div>
 

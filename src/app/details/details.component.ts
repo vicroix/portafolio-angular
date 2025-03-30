@@ -13,8 +13,8 @@ import { RouterModule } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
   @Input() fontH2 = '';
-  botonGit1 = 'flex justify-center bg-[rgb(176,62,255)] hover:bg-[rgb(189,95,255)] active:bg-[rgb(166,91,219)] w-35 shadow-sm shadow-gray-500 rounded-xl mt-20';
-  botonGit2 = 'flex justify-center bg-[rgb(62,255,175)] hover:bg-[rgb(104,255,193)] active:bg-[rgb(86,226,169)] w-35 shadow-sm shadow-gray-500 rounded-xl mt-5';
+  botonGit1 = 'flex enlace-git justify-center bg-[rgb(176,62,255)] hover:bg-[rgb(189,95,255)] active:bg-[rgb(166,91,219)] w-35 shadow-sm shadow-gray-500 rounded-xl sm:mt-20';
+  botonGit2 = 'flex enlace-git justify-center bg-[rgb(62,255,175)] hover:bg-[rgb(104,255,193)] active:bg-[rgb(86,226,169)] w-35 shadow-sm shadow-gray-500 rounded-xl sm:mt-5';
   //Cargar objeto de arrays de "public/proyectos.json"
   proyecto: any;
 

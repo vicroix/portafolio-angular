@@ -1,0 +1,26 @@
+@media (max-width: 420px) {
+  .contenedor-proyecto{
+    height: 90%;
+  }
+  .contenedor-detalles{
+    margin: 0.5rem;
+  }
+  .titulo-detalles{
+    font-size: 0.8rem;
+  }
+  .texto-detalles{
+    font-size: 0.8rem;
+  }
+  .lista-detalles{
+    font-size: 0.8rem;
+  }
+  .imagenes{
+    width: 90%;
+    margin: 0.5rem;
+  }
+  .enlace-git{
+    margin: 0.5rem;
+    margin-top: 1rem;
+    width: 35%;
+  }
+  }

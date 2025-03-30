@@ -1,5 +1,5 @@
 @media (max-width: 420px) {
-  .container {
+  .container-descripcion{
       flex-direction: column; /* Apila los elementos en una columna */
   }
 
