@@ -22,12 +22,12 @@
       <!--Descripción proyecto-->
       <div class="contenedor-detalles max-w-[100%]">
         <div
-          class="border-l-8 rounded-lg p-4 shadow-sm shadow-gray-300 bg-white text-ellipsis sm:mr-5 sm:space-y-3 sm:w-160 break-words">
+          class="border-l-8 rounded-lg space-y-1.5 p-4 shadow-sm shadow-gray-300 bg-white text-ellipsis sm:mr-5 sm:space-y-3 sm:w-160 break-words">
           <ng-container *ngFor="let elemento of proyecto?.descripcion">
             <ng-container [ngSwitch]="elemento.tipo">
               <h3 *ngSwitchCase="'titulo'" class="text-xl font-bold titulo-detalles">{{ elemento.contenido }}</h3>
               <p *ngSwitchCase="'parrafo'" class="texto-detalles">{{ elemento.contenido }}</p>
-              <ul *ngSwitchCase="'lista'" class="list-disc pl-6">
+              <ul *ngSwitchCase="'lista'" class="list-disc pl-6 lista-desordenada">
                 <li *ngFor="let tecnologias of elemento.contenido" class="lista-detalles">{{ tecnologias }}</li>
               </ul>
             </ng-container>
