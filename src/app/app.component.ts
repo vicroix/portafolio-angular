@@ -1,17 +1,16 @@
-import { Component, Input, Output} from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { RatonComponent } from './raton/raton.component';
 import { MidescripcionComponent } from './midescripcion/midescripcion.component';
 import { MishabilidadesComponent } from './mishabilidades/mishabilidades.component';
 import { FooterComponent } from './footer/footer.component';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './nav-bar/navbar.component';
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RatonComponent, MidescripcionComponent, NavbarComponent, MishabilidadesComponent, FooterComponent, CommonModule],
+  imports: [RouterOutlet, RatonComponent, MidescripcionComponent, MishabilidadesComponent, FooterComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -47,6 +47,10 @@
           "La casilla de cárcel tiene una penalización de 2 turnos",
           "La casilla amarilla que corresponde a la banca te quitan 20 monedas"
         ]
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "En proceso de rellenar..."
       }
     ],
     "imagen": "Megapoly.jpg",
@@ -81,6 +85,10 @@
           "Apache"
         ],
         "clases": "list-disc list-inside space-y-2 text-lg"
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "En proceso de rellenar..."
       }
     ],
     "imagen": "inicioMipag.jpg",
@@ -179,6 +187,40 @@
     "imagen": "ApiPokemon.jpg",
     "enlace": "https://github.com/vicroix/Angular_APIREST",
     "enlace2": "https://github.com/vicroix/mi-api"
+  },
+  {
+    "id": "4",
+    "titulo": "Portafolios en Angular",
+    "descripcion": [
+      {
+        "tipo": "titulo",
+        "contenido": "Detalles del Proyecto"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Desarrollado en Angular y Tailwindcss"
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Características"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Backend: Node.js",
+          "Frontend: Angular 19, TypeScript",
+          "Estilizado: Tailwind CSS",
+          "Comunicación HTTP: Angular HttpClient"
+        ],
+        "clases": "list-disc list-inside space-y-2 text-lg"
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "En proceso de rellenar..."
+      }
+    ],
+    "imagen": "Portafolio.png",
+    "enlace": "https://github.com/vicroix/portafolio-angular"
   }
 
 ]
