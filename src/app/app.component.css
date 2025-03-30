@@ -1,0 +1,17 @@
+@media (max-width: 420px) {
+  .container {
+      flex-direction: column; /* Apila los elementos en una columna */
+  }
+
+  .item {
+      font-size: 0.5em; /* Reduce el tamaño de la fuente */
+  }
+
+  body {
+      font-size: 0.4em; /* Reduce el tamaño de la fuente general del body */
+  }
+
+  .menu-contacto, .raton{
+    display: none;
+  }
+}

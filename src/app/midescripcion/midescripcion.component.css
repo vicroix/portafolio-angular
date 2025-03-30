@@ -1,0 +1,9 @@
+@media (max-width: 420px) {
+  .imagenes {
+    width: 40%;
+    margin-top: 1rem;
+  }
+  .descripcion{
+    padding: 1rem;
+  }
+}
