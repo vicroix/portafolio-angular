@@ -42,7 +42,7 @@
           "1 vs 1",
           "Empiezan con 100 monedas",
           "Las casillas tienen un valor de 60 monedas. Cuando un jugador cae en una casilla, evalua si no tiene propietario, si no tiene, se le habilitara el botón de comprar, si no, permanecerá deshabilitado",
-          "Si un jugador cae en la casilla del oponente, se le restara 20 monedas y se le suma al oponente",
+          "Si un jugador cae en la casilla del oponente, se le restara 20 monedas y se le sumara al oponente",
           "Las casillas violetas que tienen una imagen de 3 cartas son de suerte y tienen 3 posibilidades: sumar 20 monedas, sumar 10 monedas o restar 20 monedas",
           "La casilla de cárcel tiene una penalización de 2 turnos",
           "La casilla amarilla que corresponde a la banca te quitan 20 monedas"
@@ -50,8 +50,101 @@
       },
       {
         "tipo": "titulo",
-        "contenido": "En proceso de rellenar..."
+        "contenido": "Clases usadas"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Casillas", "Dado", "Juego", "Jugador", "Tablero"
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "contenido":"Jugador"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Representa a un jugador. Éste tiene los atributos de nombre, número de jugador, banco, victorias, derrotas, penalización y posición"
+      },
+      {
+        "tipo":"parrafo",
+        "contenido": [
+          "Métodos para obtener y establecer esos atributos, como getBanco(), setBancoSumar() y setNombre()", "setBancoSumar()"
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "contenido":"Dado"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Representa al dado. Tiene atributos como el número que muestra el dado y na ficha asociada."
+      },
+      {
+        "tipo":"lista",
+        "contenido": [
+          "Métodos para tirar el dado tirarDados()", "Comprobar si el dado es válido comprobarBDado()"
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "contenido":"Juego"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Controla la lógica del juego. Tiene atributos como las opciones de comprar, vender, pasar turno y quén está en turno"
+      },
+      {
+        "tipo":"lista",
+        "contenido": [
+          "Métodos para verificar y cambiar estos estados, como comprobarBComprar(), venderCasilla(), y comprobarBPasarTurno()"
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "contenido":"Casillas"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Maneja las casillas en el juego, incluyendo la compra, visualización y reset de las casillas."
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "cargarVisualizarCallesCompradas(): Muestra las calles compradas por los jugadores", "comprarCasilla(): Permite a un jugador comprar una casilla, asignándosela si no pertenece a nadie", "desactivarCallesCompradas(): Desactiva al visualización de las calles compradas", "getCasillas(), getValorCasilla(), getCasillasCompradas(): Obtienen información de las casillas", "imprimirContenido(): Imprime el contenido de las casillas", "nuevaPartidaResetearCalles(): Resetea las visualizaciones de las calles al iniciar una nueva partida", "valorCasilla(): Calcula el valor de una casilla dependiendo de la posicion y el dado", "visualizarCallesCompradas(): Muestra las calles compradas por un jugador en el visualizador"
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "contenido":"Tablero"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Esta clase es la representación visual y lógica del tablero de juego. Hereda de JFrame y maneja la interacción entre los jugadores y las casillas del juego"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "JTextField Calle2: Campo de texto para una calle.",
+          "JPanel Casilla2: Panel que representa una casilla en el tablero.",
+          "Casillas casillas: Instancia de la clase Casillas que maneja las casillas del tablero.",
+          "JPanel[] casillasJ1, casillasJ2: Arrays de paneles que representan las casillas de cada jugador.",
+          "Dado dado: Objeto para manejar el dado del juego.",
+          "Jugador jugador1, jugador2: Los dos jugadores del juego.",
+          "Jugador[] jugadores: Array que contiene los jugadores.",
+          "JPanel Tablero: Panel que contiene el tablero.",
+          "static Juego turno: Representa el turno del juego."
+        ]
+      },{
+        "tipo": "lista",
+        "contenido": ["main(): Método principal para iniciar la aplicación.",
+    "siAmbosJugadoresPenalizacion(): Si ambos jugadores caen en la cárcel, maneja las penalizaciones.",
+    "comprobarCasillaJ1(), comprobarCasillaJ2(): Métodos para comprobar si una casilla está comprada por el otro jugador.",
+    "evaluarParaVenderCalle(): Evalúa si una casilla puede ser vendida.",
+    "visualizarTablero(): Muestra el tablero visualmente y asigna una imagen a cada jugador."]
+
       }
+
     ],
     "imagen": "Megapoly.jpg",
     "enlace": "https://github.com/vicroix/monopoly"
