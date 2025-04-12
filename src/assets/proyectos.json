@@ -181,7 +181,19 @@
       },
       {
         "tipo": "titulo",
-        "contenido": "En proceso de rellenar..."
+        "contenido": "Puntos clave de la página"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Contiene una barra de navegación con diferentes categorías de productos (Hombre, Mujer, Niños, Niñas, Marcas)",
+          "Utiliza una verificación de sesión para mostrar el estado de usuario (loggeado o no)",
+          "Los productos se extraen de una base de datos mediante MySQL y se presentan en tarjetas con imagen, nombre, precio y opción de agregar al carrito",
+          "Sistema de registro y autentificación de usuarios en PHP, utilizando una base de datos MySQL",
+          "Los usuarios pueden registrarse mediante un formulario, donde los datos se almacenan de forma segura con un sistema de cifrado de contraseña usando password_hash en su última versión",
+          "Para la autentificación, se realiza una validación de usuario y contraseña utilizando password_verify, asegurando la seguridad del sistema, ya que ni los administradores podran acceder a dicha contraseña",
+          "La implemetación incluye redirección  automática después de un registro exitoso o un intento de inicio de sesión, con validaciones de errores claras para mejorar la experiencia de usuario"
+        ]
       }
     ],
     "imagen": "inicioMipag.jpg",
