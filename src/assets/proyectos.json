@@ -326,7 +326,44 @@
     ],
     "imagen": "Portafolio.png",
     "enlace": "https://github.com/vicroix/portafolio-angular"
+  },
+  {
+    "id": "5",
+    "titulo": "Gestor de espacios",
+    "descripcion": [
+      {
+        "tipo": "titulo",
+        "contenido": "Detalles del Proyecto"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido":"He realizado durante mis prácticas un proyecto ambicioso, cuyo objetivo de la aplicación web es gestionar espacios de teatro."
+      },
+      {
+        "tipo": "parrafo",
+        "contenido":"Tienes dos roles, administrador y profesor. Los profesores pueden realizar reservas, editar reservas o eliminarlas. Mientras que el administrador puede gestionar los espacios, añadir nuevos espacios, editarlos y eliminarlos."
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Técnologias"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Laravel",
+          "TailwindCSS",
+          "Alpine.js",
+          "Choices.js"
+        ],
+        "clases": "list-disc list-inside space-y-2 text-lg"
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "En proceso de rellenar..."
+      }
+    ],
+    "imagen": "teatroGest.jpg",
+    "enlace": "https://github.com/vicroix/portafolio-angular"
   }
-
 ]
 
