@@ -1,32 +1,36 @@
 @media (max-width: 420px) {
-  .contenedor-proyecto{
+  .contenedor-proyecto {
     height: 90%;
   }
-  .contenedor-detalles{
+  .contenedor-detalles {
     margin: 1.2rem;
   }
-  .titulo-detalles{
+  .titulo-detalles {
     font-size: 0.9rem;
     text-align: center;
   }
-  .texto-detalles{
+  .texto-detalles {
     font-size: 0.8rem;
     text-align: center;
   }
-  .lista-desordenada{
+  .lista-desordenada {
     text-align: center;
     list-style-position: inside;
   }
-  .lista-detalles{
+  .lista-detalles {
     font-size: 0.8rem;
   }
-  .imagenes{
+  .imagenes {
     width: 90%;
     margin: 0.5rem;
   }
-  .enlace-git{
+  .enlace-git {
     margin: 0.5rem;
     margin-top: 1rem;
     width: 35%;
   }
+  .videos {
+    width: 90%;
+    margin: 0.5rem;
   }
+}
