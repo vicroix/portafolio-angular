@@ -345,15 +345,38 @@
       },
       {
         "tipo": "titulo",
-        "contenido": "Técnologias"
+        "contenido": "Tecnologías principales:"
       },
       {
         "tipo": "lista",
         "contenido": [
           "Laravel",
           "TailwindCSS",
-          "Alpine.js",
+          "Alpine.js"
+        ],
+        "clases": "list-disc list-inside space-y-2 text-lg"
+      },
+          {
+        "tipo": "titulo",
+        "contenido": "Librerías adicionales:"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
           "Choices.js"
+        ],
+        "clases": "list-disc list-inside space-y-2 text-lg"
+      },
+          {
+        "tipo": "titulo",
+        "contenido": "APIs integradas:"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "FullCalendar API",
+          "Mapbox GL JS",
+          "Elfsight Reviews Widget (con reseñas de Google)"
         ],
         "clases": "list-disc list-inside space-y-2 text-lg"
       },
@@ -363,7 +386,8 @@
       }
     ],
     "imagen": "teatroGest.jpg",
-    "enlace": "https://github.com/vicroix/portafolio-angular"
+    "enlace": "https://github.com/vicroix/gestion_espacios",
+    "video": "videoComercial.mp4"
   }
 ]
 
