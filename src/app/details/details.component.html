@@ -26,9 +26,9 @@
           <ng-container *ngFor="let elemento of proyecto?.descripcion">
             <ng-container [ngSwitch]="elemento.tipo">
               <h3 *ngSwitchCase="'titulo'" class="text-xl font-bold titulo-detalles">{{ elemento.contenido }}</h3>
-              <p *ngSwitchCase="'parrafo'" class="texto-detalles">{{ elemento.contenido }}</p>
+              <p *ngSwitchCase="'parrafo'" [ngClass]="elemento?.clases" [innerHTML]="elemento.contenido"></p>
               <ul *ngSwitchCase="'lista'" class="list-disc pl-6 lista-desordenada">
-                <li *ngFor="let tecnologias of elemento.contenido" class="lista-detalles">{{ tecnologias }}</li>
+                <li *ngFor="let tecnologias of elemento.contenido" class="lista-detalles"  [innerHTML]="tecnologias"></li>
               </ul>
             </ng-container>
           </ng-container>

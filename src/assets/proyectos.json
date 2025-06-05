@@ -337,11 +337,11 @@
       },
       {
         "tipo": "parrafo",
-        "contenido":"He realizado durante mis prácticas un proyecto ambicioso, cuyo objetivo de la aplicación web es gestionar espacios de teatro."
+        "contenido":"He realizado durante mis prácticas un proyecto ambicioso, cuyo objetivo de la aplicación web es <strong>gestionar espacios de teatro.</strong>"
       },
       {
         "tipo": "parrafo",
-        "contenido":"Tienes dos roles, administrador y profesor. Los profesores pueden realizar reservas, editar reservas o eliminarlas. Mientras que el administrador puede gestionar los espacios, añadir nuevos espacios, editarlos y eliminarlos."
+        "contenido":"Tienes dos <strong>roles, administrador y profesor</strong>. Los profesores pueden realizar reservas, editar reservas o eliminarlas. Mientras que el administrador puede gestionar los espacios, añadir nuevos espacios, editarlos y eliminarlos."
       },
       {
         "tipo": "titulo",
@@ -352,11 +352,22 @@
         "contenido": [
           "Laravel",
           "TailwindCSS",
-          "Alpine.js"
+          "Alpine.js",
+          "MySQL"
         ],
         "clases": "list-disc list-inside space-y-2 text-lg"
       },
-          {
+      {
+        "tipo":"titulo",
+        "contenido": "Entorno de desarrollo:"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Apache (XAMPP)"
+        ]
+      },
+      {
         "tipo": "titulo",
         "contenido": "Librerías adicionales:"
       },
@@ -382,7 +393,52 @@
       },
       {
         "tipo": "titulo",
-        "contenido": "En proceso de rellenar..."
+        "contenido": "Puntos clave de la página"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "<strong>El proyecto comenzó en HTML, CSS, JavaScript y PHP puro </strong>. A medida que avancé, <strong>decidí migrarlo completamente a Laravel</strong>, lo cual supuso un gran desafío, ya que fui aprendiendo el framework a la vez que transformaba todo el código existente"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Empecé con una idea sencilla, pero el proyecto fue creciendo y se volvió el más ambicioso en el que he trabajado hasta ahora. Incluyó desde la arquitectura de base de datos hasta la implementación de múltiples funcionalidades dinámicas"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Realicé diagramas entidad-relación y diagramas de casos de uso para definir bien la lógica del sistema y las relaciones entre usuarios, reservas y espacios"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Integre la <strong>API Mapbox, para mostrar mapas interactivos</strong> y facilitar la localización de los espacios de teatro. La <strong>API de Elfsight, para añadir una sección de valoraciones</strong> reales que generen confianza. Y añadi la <strong>API de FullCalendar, para visualizar eventos y reservas</strong> de forma clara y dinámica en un calendario."
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "La increíble librería de Alpine.js"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Durante el desarrollo, <strong>llegué a un punto en el que estaba tan motivado e ilusionado con el proyecto que decidí mejorar la interfaz y centralizar más funcionalidades en una sola vista</strong>. Investigando opciones ligeras y reactivas, descubrí <strong>Alpine.js</strong>, una herramienta que resultó ser clave en la evolución del proyecto"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Gracias a Alpine.js:"
+      },
+      {
+        "tipo": "lista",
+        "contenido": [
+          "Integré <strong>múltiples vistas en una sola página</strong> dentro del módulo de gestión de salas, permitiendo al administrador ver, añadir y editar salas desde una misma ventana sin necesidad de recargar o cambiar página.",
+          "Utilicé atributos como <strong>x-init, x-show y especialmente x-if, que fue crucial para controlar la generación de elementos del DOM</strong> solo cuando era necesario, evitando cargas innecesarias y mejorando el rendimiento.",
+          "También <strong>mejoré la experiencia móvil</strong>, ajustando ciertos elementos visuales y lógicos según el tamaño de pantalla, para ofrecer una navegación más cómoda y fluida en dispositivos pequeños."
+        ]
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Esta desición técnica aportó centralización, dinamismo y eficiencia, tanto en el código como en la experiencia del usuario administrador."
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "He crado un vídeo narrado con imágenes y marcadores visuales para explicar el funcionamiento de teatroGest de forma clara y guiada.",
+        "clases": "texto-detalles bg-gradient-to-r from-yellow-300 to-orange-400 text-black px-1 rounded"
       }
     ],
     "imagen": "teatroGest.jpg",
