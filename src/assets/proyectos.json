@@ -444,6 +444,92 @@
     "imagen": "teatroGest.jpg",
     "enlace": "https://github.com/vicroix/gestion_espacios",
     "video": "videoComercial.mp4"
-  }
+  },
+{
+  "id": "6",
+  "titulo": "Aplicación Web de Fichaje Laboral",
+  "descripcion": [
+    {
+      "tipo": "titulo",
+      "contenido": "Detalles del Proyecto"
+    },
+    {
+      "tipo": "parrafo",
+      "contenido": "He creado una aplicación web de fichaje laboral para gestionar entradas, salidas y reservas de manera eficiente, usando Angular en el frontend y Node.js con Express.js en el backend."
+    },
+    {
+      "tipo": "titulo",
+      "contenido": "Tecnologías principales:"
+    },
+    {
+      "tipo": "lista",
+      "contenido": [
+        "Angular",
+        "Node.js",
+        "Express.js",
+        "MySQL",
+        "Boostrap"
+      ],
+      "clases": "list-disc list-inside space-y-2 text-lg"
+    },
+    {
+      "tipo":"titulo",
+      "contenido": "Entorno de desarrollo:"
+    },
+    {
+      "tipo": "lista",
+      "contenido": [
+        "Node.js",
+        "Angular CLI",
+        "npm",
+        "VS CODE",
+        "Git"
+      ]
+    },
+    {
+      "tipo": "titulo",
+      "contenido": "Librerías adicionales:"
+    },
+    {
+      "tipo": "lista",
+      "contenido": [
+        "Bootstrap (para modales y componentes de interfaz)"
+      ],
+      "clases": "list-disc list-inside space-y-2 text-lg"
+    },
+    {
+      "tipo": "titulo",
+      "contenido": "Puntos clave del proyecto"
+    },
+    {
+      "tipo": "parrafo",
+      "contenido": "Diseñé la arquitectura completa del backend, incluyendo la base de datos y las relaciones entre usuarios y fichajes."
+    },
+    {
+      "tipo": "parrafo",
+      "contenido": "Implementé funcionalidades para fichar entradas y salidas, teniendo la opción de pausar y reanudar durante el día, y visualizar los datos de manera clara y dinámica."
+    },
+    {
+      "tipo": "parrafo",
+      "contenido": "Creé un flujo frontend-backend totalmente integrado y responsivo, asegurando que la aplicación funcione correctamente en cualquier dispositivo."
+    },
+    {
+      "tipo": "titulo",
+      "contenido": "Mejoras y motivación"
+    },
+    {
+      "tipo": "parrafo",
+      "contenido": "Aunque el proyecto nació como práctica personal, añadí mejoras de interfaz, experiencia de usuario y funcionalidades avanzadas, demostrando iniciativa y capacidad de aprendizaje autónomo."
+    },
+    {
+      "tipo": "parrafo",
+      "contenido": "Optimicé la interfaz y la experiencia móvil para que la navegación sea fluida y cómoda en cualquier dispositivo."
+    }
+  ],
+  "imagen": "InicioFL.png",
+  "enlace": "https://github.com/vicroix/gestionfichaje",
+  "enlace2": "https://github.com/vicroix/backend_fichaje"
+}
+
 ]
 
