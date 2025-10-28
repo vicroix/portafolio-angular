@@ -12,5 +12,6 @@ export class CardComponent {
   @Input() imageSrc: string = '';
   @Input() getTitle: string = 'Título por defecto';
   @Input() id: string = '';
-  botones = 'py-2 px-4 rounded-xl p-2 shadow-sm shadow-gray-500 m-4 w-45 bg-[rgb(176,62,255)] hover:bg-[rgb(189,95,255)] active:bg-[rgb(166,91,219)]  text-white font-medium';
+  @Input() descripcion: string = '';
+  botones = 'py-1 px-2 rounded-xl m-4 p-2 bg-[rgb(176,62,255)] hover:bg-[rgb(189,95,255)] active:bg-[rgb(166,91,219)]  text-white font-medium';
 }

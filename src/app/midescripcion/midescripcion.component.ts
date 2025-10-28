@@ -1,8 +1,9 @@
+import { MishabilidadesComponent } from './../mishabilidades/mishabilidades.component';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-midescripcion',
-  imports: [],
+  imports: [MishabilidadesComponent],
   templateUrl: './midescripcion.component.html',
   styleUrl: './midescripcion.component.css'
 })
