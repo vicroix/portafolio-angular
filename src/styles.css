@@ -23,12 +23,13 @@ html {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: Inter, sans-serif;
   font-weight: normal;
 }
 
 @layer base {
   :root {
+    /* Temas de colores */
     --background: hsl(240, 10%, 98%);
     --foreground: hsl(240, 5%, 10%);
     --card: hsl(240, 10%, 98%);
@@ -46,18 +47,36 @@ html {
     --muted: hsl(240, 5%, 96%);
     --muted-foreground: hsl(240, 4%, 46%);
 
-    --accent: hsl(340, 80%, 65%);
+    --accent: hsl(34, 92%, 64%);
     --accent-foreground: hsl(0, 0%, 100%);
 
     --destructive: hsl(0, 84%, 60%);
     --destructive-foreground: hsl(0, 0%, 100%);
 
-    --border: hsl(240, 6%, 90%);
+    --border: hsl(0, 0%, 90%);
     --input: hsl(240, 6%, 90%);
     --ring: hsl(262, 80%, 58%);
-    --radius: 0.5rem;
+
+    /* Tamaño de fuentes */
+    --font-size-display: 70px;
+    --font-size-title: 30px;
+    --font-size-subtitle: 18px;
+    --font-size-body: 18px;
+    --font-size-sm: 16px;
+    --font-size-xs: 14px;
+
+    /* Espaciados */
+    --spacing-sm: 0.25rem;
+    --spacing-md: 0.5rem;
+    --spacing-lg: 1rem;
+
+    /* Radios */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
   }
 
+  /**** Terminar de implementar próximamente ****/
   .dark {
     --background: hsl(240, 10%, 3.9%);
     --foreground: hsl(0, 0%, 98%);
@@ -88,27 +107,22 @@ html {
   }
 }
 
-span {
-  display: block;
-  font-size: 36px;
-  font-weight: 800;
-  letter-spacing: -0.025em;
+/* CSS General */
+
+h1, h2, h3, h4, p, li{
+  font-family: Inter;
 }
 
-h1, h2, h3, h4, p{
-    font-family: Inter;
-}
-
-h2{
-  font-size: 30px;
+h2 {
+  font-size: var(--font-size-title);
   font-weight: 700;
   letter-spacing: -0.025em;
   text-align: center;
   margin-bottom: 48px;
 }
 
-.text-description{
-color: var(--muted-foreground);
+h3{
+  font-size: var(--font-size-h3);
 }
 
 .bg-primary {
@@ -121,11 +135,12 @@ color: var(--muted-foreground);
   color: var(--secondary-foreground);
   border: transparent;
 }
-.bg-boton-description{
-  border: 1px solid hsl(240 6% 90%);;
+.bg-boton-description {
+  border: 1px solid hsl(240 6% 90%);
 }
-.bg-boton-description:hover{
-  background-color: var(--accent);
+.bg-boton-description:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .hover\:bg-secundary\/80:hover {
@@ -134,12 +149,6 @@ color: var(--muted-foreground);
 
 .hover\:bg-primary\/90:hover {
   background-color: hsla(262, 80%, 58%, 0.9);
-}
-
-.text-card {
-  font-size: 18px;
-  color: hsl(240, 5%, 10%, 0.8);
-  font-family: Inter;
 }
 
 .text-skills {
@@ -204,6 +213,7 @@ color: var(--muted-foreground);
     transform: translateX(-20px);
   }
 }
+
 .animate-fade-slide {
   animation: fadeSlide 2s ease-in-out infinite;
 }
@@ -240,7 +250,7 @@ color: var(--muted-foreground);
   animation: cambioColorVolver 3s ease infinite;
 }
 
-.image-card{
+.image-card {
   width: 300px;
   height: 150px;
   border-radius: 12px;

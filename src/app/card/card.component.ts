@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input} from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CardFooterComponent } from '../card-footer/card-footer.component';
+import { CardContentComponent } from '../card-content/card-content.component';
 
 @Component({
   selector: 'app-card',
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, CardFooterComponent, CardContentComponent],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  styleUrls: ['./card.component.css']
 })
 export class CardComponent {
   @Input() imageSrc: string = '';

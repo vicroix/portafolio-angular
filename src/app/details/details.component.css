@@ -1,3 +1,8 @@
+label{
+  font-size: 20px;
+  cursor: pointer;
+}
+
 @media (max-width: 420px) {
   .contenedor-proyecto {
     height: 90%;

@@ -1,48 +1,74 @@
-<div class="min-h-screen flex flex-col">
-  <!-- Volver al Home -->
-  <div class="translate-y-7/2 translate-x-2/12 sm:translate-x-4/2 sm:translate-y-5/3 w-35 h-5 sm:h-10">
-    <a [routerLink]="['']" class="sm:m-4 flex items-center">
-      <!-- Flecha < -->
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="25" viewBox="0 0 48 48"
-        class="fill-[rgb(169,56,243)] cambio-color-flecha hover-mover-flecha">
-        <path
-          d="M 34.470703 2.9863281 A 1.50015 1.50015 0 0 0 33.439453 3.4394531 L 13.939453 22.939453 A 1.50015 1.50015 0 0 0 13.939453 25.060547 L 33.439453 44.560547 A 1.50015 1.50015 0 1 0 35.560547 42.439453 L 17.121094 24 L 35.560547 5.5605469 A 1.50015 1.50015 0 0 0 34.470703 2.9863281 z">
-        </path>
-      </svg>
-      <h2 [ngClass]='fontH2' class="cambio-color-volver">Volver</h2>
-    </a>
-  </div>
+<section class="contenedor-proyecto flex flex-col items-center">
 
-  <!-- Título proyecto -->
-  <div class="contenedor-proyecto flex flex-col flex-grow items-center sm:mt-14">
-    <div class="h-20">
-      <h3 class="text-[24px] titulo-detalles font-bold">{{proyecto?.titulo}}</h3>
+
+  <div class="flex flex-col gap-3 w-[58%]">
+
+    <!-- Flecha para volver -->
+    <div>
+      <a [routerLink]="['']" class="sm:m-4 flex gap-3 items-center">
+        <!-- SVG Flecha -->
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 48 48"
+          class="fill-[rgb(169,56,243)] cambio-color-flecha hover-mover-flecha">
+          <path
+            d="M 34.470703 2.9863281 A 1.50015 1.50015 0 0 0 33.439453 3.4394531 L 13.939453 22.939453 A 1.50015 1.50015 0 0 0 13.939453 25.060547 L 33.439453 44.560547 A 1.50015 1.50015 0 1 0 35.560547 42.439453 L 17.121094 24 L 35.560547 5.5605469 A 1.50015 1.50015 0 0 0 34.470703 2.9863281 z">
+          </path>
+        </svg>
+        <label [ngClass]='fontH2' class="cambio-color-volver">Volver</label>
+      </a>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-1 mb-5 sm:mb-15">
-      <!--Descripción proyecto-->
-      <div class="contenedor-detalles max-w-[100%]">
+
+    <!-- Título del proyecto -->
+    <div class="h-20 mt-3">
+      <h2 class="titulo-detalles flex font-bold">{{proyecto?.titulo}}</h2>
+    </div>
+
+    <div class="flex flex-col gap-10">
+      <div>
+        <img class="imagenes w-full object-contain shadow-lg" [src]="'assets/img/' + proyecto?.imagen"
+          [alt]="proyecto?.titulo">
+      </div>
+
+      <!--Contenido de la descripción-->
+      <!--Contenido de la descripción-->
+      <div class="contenedor-detalles">
         <div
-          class="border-l-8 rounded-lg space-y-1.5 p-4 shadow-sm shadow-gray-300 bg-white text-ellipsis sm:mr-5 sm:space-y-3 sm:w-160 break-words">
+          class="p-8 space-y-6 sm:mr-5 break-words transition-transform duration-300 hover:shadow-xl">
           <ng-container *ngFor="let elemento of proyecto?.descripcion">
             <ng-container [ngSwitch]="elemento.tipo">
-              <h3 *ngSwitchCase="'titulo'" class="text-xl font-bold titulo-detalles">{{ elemento.contenido }}</h3>
-              <p *ngSwitchCase="'parrafo'" [ngClass]="elemento?.clases" [innerHTML]="elemento.contenido"></p>
-              <ul *ngSwitchCase="'lista'" class="list-disc pl-6 lista-desordenada">
-                <li *ngFor="let tecnologias of elemento.contenido" class="lista-detalles"  [innerHTML]="tecnologias"></li>
+
+              <!-- TITULO -->
+              <h3 *ngSwitchCase="'titulo'"
+                class="text-2xl font-semibold text-[rgb(169,56,243)] border-l-4 border-[rgb(169,56,243)] pl-3">
+                {{ elemento.contenido }}
+              </h3>
+
+              <!-- LISTA -->
+              <ul *ngSwitchCase="'lista'"
+                class="flex gap-x-8 gap-y-2 pl-5 text-gray-700 dark:text-gray-300">
+                <li *ngFor="let tecnologias of elemento.contenido"
+                  class="font-bold border-1 border-gray-300 bg-secundary text-skills rounded-md p-3">
+                   {{tecnologias}}
+                </li>
               </ul>
+              <!-- PÁRRAFO -->
+              <p *ngSwitchCase="'parrafo'" class="text-gray-700 dark:text-gray-300 leading-relaxed"
+                [ngClass]="elemento?.clases" [innerHTML]="elemento.contenido">
+              </p>
+
+
             </ng-container>
           </ng-container>
         </div>
       </div>
 
+
       <!-- Imágen proyecto y link a git -->
       <div class="flex flex-col gap-3 items-center">
-        <img class="imagenes w-160 h-auto max-h-full object-contain shadow-sm" [src]="'assets/img/' + proyecto?.imagen" [alt]="proyecto?.titulo">
         <ng-container *ngIf="proyecto?.video">
-          <video class="videos w-160 h-auto shadow-sm" [src]="'assets/video/' + proyecto?.video" muted controls playsinline></video>
+          <video class="videos w-160 h-auto shadow-sm" [src]="'assets/video/' + proyecto?.video" muted controls
+            playsinline></video>
         </ng-container>
-        <a [href]="proyecto?.enlace"
-          [ngClass]="botonGit1" [title]="proyecto?.enlace">
+        <a [href]="proyecto?.enlace" [ngClass]="botonGit1" [title]="proyecto?.enlace">
           <p class="flex justify-center items-center pr-2 text-white">Ir a </p>
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64"
             class="fill-white w-9 h-9 m-1 transition-transform duration-300">
@@ -52,19 +78,18 @@
           </svg>
         </a>
         <!-- Por si requiero segundo enlace a git -->
-         <ng-container *ngIf="proyecto?.enlace2">
-           <a [href]="proyecto?.enlace2"
-             [ngClass]="botonGit2" [title]="proyecto?.enlace2">
-             <p class="flex justify-center items-center pr-2 text-white">Ir a </p>
-             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64"
-               class="fill-white w-9 h-9 m-1 transition-transform duration-300">
-               <path
-                 d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z">
-               </path>
-             </svg>
-           </a>
-         </ng-container>
+        <ng-container *ngIf="proyecto?.enlace2">
+          <a [href]="proyecto?.enlace2" [ngClass]="botonGit2" [title]="proyecto?.enlace2">
+            <p class="flex justify-center items-center pr-2 text-white">Ir a </p>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64"
+              class="fill-white w-9 h-9 m-1 transition-transform duration-300">
+              <path
+                d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z">
+              </path>
+            </svg>
+          </a>
+        </ng-container>
       </div>
     </div>
   </div>
-
+</section>

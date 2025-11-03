@@ -1,11 +1,21 @@
-.descripcion-contenedor{
-
+h2{
+  font-size: var(--font-size-title);
 }
+p{
+  font-size: var(--font-size-sm);
+}
+
+.contenedor-sobre-mi{
+border-radius: var(--radius-sm);
+box-shadow: 0 1px 3px 1px var(--border);
+}
+
 .imagenes {
   width: 180px;
   height: 180px;
   object-fit: cover;
 }
+
 @media (max-width: 700px) {
   .imagenes {
     width: 500px;

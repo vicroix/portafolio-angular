@@ -1,10 +1,9 @@
-<div class="max-w-7xl mx-auto px-4">
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
-    <app-card imageSrc="Megapoly.jpg" getTitle="Monopoly en Java" id="1" descripcion="Juego del monopoly versión java"/>
-    <app-card imageSrc="inicioMipag.jpg" getTitle="Mi pagina web" id="2"/>
-    <app-card imageSrc="ApiPokemon.jpg" getTitle="API REST Pokemon Frontend/Backend" id="3"/>
-    <app-card imageSrc="Portafolio.png" getTitle="Mi portafolio en Angular" id="4"/>
-    <app-card imageSrc="teatroGest.jpg" getTitle="Gestor espacios" id="5"/>
-    <app-card imageSrc="InicioFL.png" getTitle="App web de fichaje laboral" id="6"/>
-  </div>
+<div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-10">
+  <app-card class="flex-card" *ngFor="let carta of cartas"
+    [imageSrc]="carta.imageSrc"
+    [id]="carta.id"
+    [getTitle]="carta.getTitle"
+    [descripcion]="carta.descripcion" />
 </div>
+
+

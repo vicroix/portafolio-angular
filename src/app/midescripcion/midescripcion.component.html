@@ -1,23 +1,27 @@
-<div class="descripcion-contenedor flex flex-col md:flex-row items-center md:items-stretch bg-white shadow-lg rounded-xl overflow-hidden max-w-5xl">
+<div class="max-w-4xl w-full px-6 text-center">
+  <h2 class="font-bold mb-10">Sobre mí</h2>
+  <div class="w-full flex justify-center">
+    <div
+      class="contenedor-sobre-mi flex flex-col md:flex-row items-center md:items-stretch overflow-hidden max-w-5xl">
 
-  <!-- Imagen izquierda, ligeramente menos alta en responsive -->
-  <div class="w-full md:w-1/2 h-56 md:h-auto">
-    <img class="w-full h-full object-cover" src="/assets/img/fotoPerfil.jpeg" alt="Foto de perfil">
+      <!-- Imagen izquierda -->
+      <div class="w-full md:w-1/2 h-56 md:h-auto">
+        <img class="w-full h-full object-contain" src="/assets/img/fotoPerfil.jpeg" alt="Foto de perfil">
+
+      </div>
+
+      <!-- Texto derecha -->
+      <div class="w-full md:w-1/2 flex flex-col gap-6 p-8 leading-relaxed text-center md:text-left">
+        <p>
+          Soy un desarrollador Full Stack apasionado por crear aplicaciones web atractivas, funcionales y centradas en
+          el usuario.
+        </p>
+        <p>
+          Mi objetivo es escribir siempre código limpio, eficiente y escalable. Soy un aprendiz constante, siempre
+          explorando nuevas tecnologías para seguir mejorando.
+        </p>
+        <app-mishabilidades></app-mishabilidades>
+      </div>
+    </div>
   </div>
-
-  <!-- Texto derecha -->
-  <div class="w-full md:w-1/2 flex flex-col gap-6 p-8 text-lg leading-relaxed text-center md:text-left">
-    <p>
-      Soy un desarrollador Full Stack apasionado por crear aplicaciones web atractivas, funcionales y centradas en el usuario.
-    </p>
-    <p>
-      Mi objetivo es escribir siempre código limpio, eficiente y escalable. Soy un aprendiz constante, siempre explorando nuevas tecnologías para seguir mejorando.
-    </p>
-
-    <app-mishabilidades></app-mishabilidades>
-  </div>
-
 </div>
-
-
-

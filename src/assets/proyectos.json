@@ -449,15 +449,7 @@
   "id": "6",
   "titulo": "Aplicación Web de Fichaje Laboral",
   "descripcion": [
-    {
-      "tipo": "titulo",
-      "contenido": "Detalles del Proyecto"
-    },
-    {
-      "tipo": "parrafo",
-      "contenido": "He creado una aplicación web de fichaje laboral para gestionar entradas, salidas y reservas de manera eficiente, usando Angular en el frontend y Node.js con Express.js en el backend."
-    },
-    {
+     {
       "tipo": "titulo",
       "contenido": "Tecnologías principales:"
     },
@@ -488,14 +480,11 @@
     },
     {
       "tipo": "titulo",
-      "contenido": "Librerías adicionales:"
+      "contenido": "Detalles del Proyecto"
     },
     {
-      "tipo": "lista",
-      "contenido": [
-        "Bootstrap (para modales y componentes de interfaz)"
-      ],
-      "clases": "list-disc list-inside space-y-2 text-lg"
+      "tipo": "parrafo",
+      "contenido": "He creado una aplicación web de fichaje laboral para gestionar entradas, salidas y reservas de manera eficiente, usando Angular en el frontend y Node.js con Express.js en el backend."
     },
     {
       "tipo": "titulo",

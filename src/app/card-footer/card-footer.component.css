@@ -1,0 +1,8 @@
+button {
+  border-radius: var(--radius-sm);
+}
+
+.card-footer {
+  margin-bottom: 5%;
+  margin-right: 5%;
+}
