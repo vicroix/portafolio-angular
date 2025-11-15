@@ -46,6 +46,7 @@ html {
 
     --muted: hsl(240, 5%, 96%);
     --muted-foreground: hsl(240, 4%, 46%);
+    --muted-foreground-trasparent: hsla(0, 4%, 83%, 0.5);
 
     --accent: hsl(34, 92%, 64%);
     --accent-foreground: hsl(0, 0%, 100%);
@@ -112,13 +113,13 @@ html {
 h1, h2, h3, h4, p, li{
   font-family: Inter;
 }
-
+p{
+  margin:0;
+}
 h2 {
   font-size: var(--font-size-title);
   font-weight: 700;
   letter-spacing: -0.025em;
-  text-align: center;
-  margin-bottom: 48px;
 }
 
 h3{

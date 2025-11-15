@@ -3,13 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { MidescripcionComponent } from './midescripcion/midescripcion.component';
 import { FooterComponent } from './footer/footer.component';
 import { CommonModule } from '@angular/common';
-import { PortadaComponent } from './portada/portada.component';
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MidescripcionComponent, PortadaComponent,FooterComponent, CommonModule],
+  imports: [RouterOutlet, MidescripcionComponent,FooterComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

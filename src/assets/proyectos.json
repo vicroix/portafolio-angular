@@ -16,7 +16,7 @@
         "contenido": "Técnologias usadas"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-ordenada",
         "contenido": [
           "Java",
           "Netbeans",
@@ -36,7 +36,7 @@
         "contenido": "Características del juego"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "Tablero de 5x5",
           "1 vs 1",
@@ -53,7 +53,7 @@
         "contenido": "Clases usadas"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "Casillas", "Dado", "Juego", "Jugador", "Tablero"
         ]
@@ -81,7 +81,7 @@
         "contenido": "Representa al dado. Tiene atributos como el número que muestra el dado y na ficha asociada."
       },
       {
-        "tipo":"lista",
+        "tipo":"lista-desordenada",
         "contenido": [
           "Métodos para tirar el dado tirarDados()", "Comprobar si el dado es válido comprobarBDado()"
         ]
@@ -95,7 +95,7 @@
         "contenido": "Controla la lógica del juego. Tiene atributos como las opciones de comprar, vender, pasar turno y quén está en turno"
       },
       {
-        "tipo":"lista",
+        "tipo":"lista-desordenada",
         "contenido": [
           "Métodos para verificar y cambiar estos estados, como comprobarBComprar(), venderCasilla(), y comprobarBPasarTurno()"
         ]
@@ -109,7 +109,7 @@
         "contenido": "Maneja las casillas en el juego, incluyendo la compra, visualización y reset de las casillas."
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "cargarVisualizarCallesCompradas(): Muestra las calles compradas por los jugadores", "comprarCasilla(): Permite a un jugador comprar una casilla, asignándosela si no pertenece a nadie", "desactivarCallesCompradas(): Desactiva al visualización de las calles compradas", "getCasillas(), getValorCasilla(), getCasillasCompradas(): Obtienen información de las casillas", "imprimirContenido(): Imprime el contenido de las casillas", "nuevaPartidaResetearCalles(): Resetea las visualizaciones de las calles al iniciar una nueva partida", "valorCasilla(): Calcula el valor de una casilla dependiendo de la posicion y el dado", "visualizarCallesCompradas(): Muestra las calles compradas por un jugador en el visualizador"
         ]
@@ -123,7 +123,7 @@
         "contenido": "Esta clase es la representación visual y lógica del tablero de juego. Hereda de JFrame y maneja la interacción entre los jugadores y las casillas del juego"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "JTextField Calle2: Campo de texto para una calle.",
           "JPanel Casilla2: Panel que representa una casilla en el tablero.",
@@ -136,7 +136,7 @@
           "static Juego turno: Representa el turno del juego."
         ]
       },{
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": ["main(): Método principal para iniciar la aplicación.",
     "siAmbosJugadoresPenalizacion(): Si ambos jugadores caen en la cárcel, maneja las penalizaciones.",
     "comprobarCasillaJ1(), comprobarCasillaJ2(): Métodos para comprobar si una casilla está comprada por el otro jugador.",
@@ -146,7 +146,7 @@
       }
 
     ],
-    "imagen": "Megapoly.jpg",
+    "imagen": ["Megapoly.jpg"],
     "enlace": "https://github.com/vicroix/monopoly"
   },
   {
@@ -167,7 +167,7 @@
         "contenido": "Características"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-ordenada",
         "contenido": [
           "JavaScript",
           "HTML5",
@@ -184,7 +184,7 @@
         "contenido": "Puntos clave de la página"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "Contiene una barra de navegación con diferentes categorías de productos (Hombre, Mujer, Niños, Niñas, Marcas)",
           "Utiliza una verificación de sesión para mostrar el estado de usuario (loggeado o no)",
@@ -196,7 +196,7 @@
         ]
       }
     ],
-    "imagen": "inicioMipag.jpg",
+    "imagen": ["inicioMipag.jpg"],
     "enlace": "https://github.com/vicroix/Trabajo_Desarrollo_Servidores"
   },
   {
@@ -216,7 +216,7 @@
         "contenido": "Características"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "Backend: Node.js, Express.js",
           "Frontend: Angular 19, TypeScript",
@@ -230,7 +230,7 @@
         "contenido": "Funcionalidades implementadas"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "Obtener lista de Pokemon: Listado paginado de Pokemon con limit y offset.",
           "Ver detalles de un Pokemon: Seleccionar un elemento de la lista para ver su ID, nombre, tipo.",
@@ -243,7 +243,7 @@
         "contenido": "API REST"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "GET /api/pokemons: Obtener lista completa o paginada.",
           "GET /api/pokemons/id: Obtener los detalles de un Pokemon por su ID",
@@ -256,7 +256,7 @@
         "contenido": "Cliente Angular"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "Servicio (pokemon.service.ts): Gestiona las peticiones HTTP hacia la API.",
           "Componente (pokemon-list.component.ts): Renderiza la lista de Pokemon y permite seleccionar o modificar elementos.",
@@ -268,7 +268,7 @@
         "contenido": "Aprendizaje clave"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "Configuración de un servidor REST con Express.js.",
           "Manejo de peticiones HTTP con Angular.",
@@ -281,7 +281,7 @@
         "contenido": "Mejoras futuras"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "Añadir imágenes de los Pokemon.",
           "Implementar la eliminación desde el frontend.",
@@ -289,7 +289,7 @@
         ]
       }
     ],
-    "imagen": "ApiPokemon.jpg",
+    "imagen": ["ApiPokemon.jpg"],
     "enlace": "https://github.com/vicroix/Angular_APIREST",
     "enlace2": "https://github.com/vicroix/mi-api"
   },
@@ -310,21 +310,17 @@
         "contenido": "Características"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-ordenada",
         "contenido": [
-          "Backend: Node.js",
-          "Frontend: Angular 19, TypeScript",
-          "Estilizado: Tailwind CSS",
-          "Comunicación HTTP: Angular HttpClient"
+          "Node.js",
+          "Angular",
+          "TypeScript",
+          "Tailwind CSS"
         ],
         "clases": "list-disc list-inside space-y-2 text-lg"
-      },
-      {
-        "tipo": "titulo",
-        "contenido": "En proceso de rellenar..."
       }
     ],
-    "imagen": "Portafolio.png",
+    "imagen": ["Portafolio.png"],
     "enlace": "https://github.com/vicroix/portafolio-angular"
   },
   {
@@ -348,7 +344,7 @@
         "contenido": "Tecnologías principales:"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-ordenada",
         "contenido": [
           "Laravel",
           "TailwindCSS",
@@ -362,7 +358,7 @@
         "contenido": "Entorno de desarrollo:"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-ordenada",
         "contenido": [
           "Apache (XAMPP)"
         ]
@@ -372,7 +368,7 @@
         "contenido": "Librerías adicionales:"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-ordenada",
         "contenido": [
           "Choices.js"
         ],
@@ -383,7 +379,7 @@
         "contenido": "APIs integradas:"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-ordenada",
         "contenido": [
           "FullCalendar API",
           "Mapbox GL JS",
@@ -424,7 +420,7 @@
         "contenido": "Gracias a Alpine.js:"
       },
       {
-        "tipo": "lista",
+        "tipo": "lista-desordenada",
         "contenido": [
           "Integré <strong>múltiples vistas en una sola página</strong> dentro del módulo de gestión de salas, permitiendo al administrador ver, añadir y editar salas desde una misma ventana sin necesidad de recargar o cambiar página.",
           "Utilicé atributos como <strong>x-init, x-show y especialmente x-if, que fue crucial para controlar la generación de elementos del DOM</strong> solo cuando era necesario, evitando cargas innecesarias y mejorando el rendimiento.",
@@ -441,7 +437,7 @@
         "clases": "texto-detalles bg-gradient-to-r from-yellow-300 to-orange-400 text-black px-1 rounded"
       }
     ],
-    "imagen": "teatroGest.jpg",
+    "imagen": ["teatroGest.jpg"],
     "enlace": "https://github.com/vicroix/gestion_espacios",
     "video": "videoComercial.mp4"
   },
@@ -454,7 +450,7 @@
       "contenido": "Tecnologías principales:"
     },
     {
-      "tipo": "lista",
+      "tipo": "lista-ordenada",
       "contenido": [
         "Angular",
         "Node.js",
@@ -469,7 +465,7 @@
       "contenido": "Entorno de desarrollo:"
     },
     {
-      "tipo": "lista",
+      "tipo": "lista-ordenada",
       "contenido": [
         "Node.js",
         "Angular CLI",
@@ -515,7 +511,7 @@
       "contenido": "Optimicé la interfaz y la experiencia móvil para que la navegación sea fluida y cómoda en cualquier dispositivo."
     }
   ],
-  "imagen": "InicioFL.png",
+  "imagen": ["inicioTrasLogin.jpg", "perfilUsuario.jpg","guardarSalario.jpg", "empezarTurno.jpg", "pausarTurno.jpg", "terminarTurno.jpg", "mostrarTurnoCompletado.jpg"],
   "enlace": "https://github.com/vicroix/gestionfichaje",
   "enlace2": "https://github.com/vicroix/backend_fichaje"
 }
