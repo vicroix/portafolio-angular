@@ -7,11 +7,11 @@ ol {
   list-style-type: disc;
 }
 
-p{
+p {
   padding: 0;
 }
 
-h2{
+h2 {
   margin-bottom: 0px;
 }
 h3 {
@@ -34,12 +34,14 @@ h3 {
   height: 24px;
 }
 
-.object-contain{
- mask-image: linear-gradient(to right,
-      transparent,
-      rgb(2, 2, 2) 2%,
-      rgb(0, 0, 0) 98%,
-      transparent);
+.object-contain {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    rgb(2, 2, 2) 2%,
+    rgb(0, 0, 0) 98%,
+    transparent
+  );
 }
 
 @media (max-width: 420px) {
@@ -84,5 +86,11 @@ h3 {
   }
   .button-carusel-arrow {
     height: calc(var(--spacing) * 10);
+  }
+  #arrowCaruselLeft {
+    left: calc(var(--spacing) * 4);
+  }
+  #arrowCaruselRight{
+    right: calc(var(--spacing) * 4)
   }
 }
