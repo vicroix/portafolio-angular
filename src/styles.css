@@ -61,10 +61,12 @@ html {
     /* Tamaño de fuentes */
     --font-size-title: 30px;
     --font-size-title-md: 22px;
+    --font-size-title-xs: 16px;
     --font-size-subtitle: 18px;
-    --font-size-body: 18px;
-    --font-size-sm: 16px;
-    --font-size-xs: 14px;
+    --font-size-body: 16px;
+    --font-size-sm: 14px;
+    --font-size-xs: 13px;
+    --font-size-2xs: 12px;
 
     /* Espaciados */
     --spacing-sm: 0.25rem;
@@ -330,15 +332,18 @@ h3 {
 
 @media (max-width: 1260px){
   p{
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-2xs);
   }
   h1{
     font-size: var();
   }
   h2{
-    font-size: var(--font-size-title-md);
+    font-size: var(--font-size-title-xs);
   }
   h3{
-    font-size: var(--font-size-subtitle);
+    font-size: var(--font-size-title-xs);
+  }
+  .text-skills{
+    font-size: var(--font-size-2xs);
   }
 }

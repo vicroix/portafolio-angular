@@ -1,4 +1,5 @@
 .contenedor-sobre-mi{
+margin-top: 12%;
 border-radius: var(--radius-sm);
 box-shadow: 0 0px 10px 5px var(--border);
 background-color: var(--background);
@@ -19,9 +20,8 @@ background-color: var(--background);
   a{
     display: none;
   }
-  .imagenes {
-    width: 500px;
-    margin-top: 1rem;
+  img{
+    width: 260px;
   }
   .descripcion {
     padding: 1rem;
