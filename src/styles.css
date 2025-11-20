@@ -328,7 +328,7 @@ h3 {
 }
 
 
-@media (max-width: 700px){
+@media (max-width: 1260px){
   p{
     font-size: var(--font-size-xs);
   }
