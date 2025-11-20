@@ -1,6 +1,6 @@
 <div
-  class="card bg-white rounded-xl shadow-sm overflow-hidden flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-  <img class="md:h-56 lg:h-64" [src]="'/assets/img/' + imageSrc" [alt]="getTitle" />
+  class="card flex flex-col bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1" appearOnScroll>
+  <img class="md:h-56 lg:h-64" [src]="'/assets/img/' + imageSrc" [alt]="getTitle" appearOnScroll/>
 
   <!-- Resumen del proyecto -->
   <app-card-content [descripcion]="descripcion" [getTitle]="getTitle"></app-card-content>

@@ -1,6 +1,7 @@
 .flex-card {
   flex: 1 1 calc(33.333% - 2.5rem); /* 3 por fila */
-  max-width: 380px;
+  max-width: 370px;
+  padding: 16px;
 }
 
 @media (max-width: 1024px) {

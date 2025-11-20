@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input} from '@angular/core';
+import { Component, Directive, Input} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CardFooterComponent } from '../card-footer/card-footer.component';
 import { CardContentComponent } from '../card-content/card-content.component';
+import { AppearOnScrollDirective } from '../directives/appear-on-scroll.directive';
 
 @Component({
   selector: 'app-card',
-  imports: [RouterModule, CommonModule, CardFooterComponent, CardContentComponent],
+  imports: [RouterModule, CommonModule, CardFooterComponent, CardContentComponent, AppearOnScrollDirective],
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })

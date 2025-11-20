@@ -1,7 +1,10 @@
 button {
   border-radius: var(--radius-sm);
 }
-
+svg{
+  width: var(--w-15);
+  height: var(--w-15);
+}
 .card-footer {
   margin-bottom: 5%;
   margin-right: 5%;

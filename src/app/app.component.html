@@ -6,28 +6,23 @@
 
 <!-- Portada -->
 <section
-  class="relative min-h-screen container-descripcion flex justify-center items-center bg-[linear-gradient(to_bottom,rgba(255,255,255,0.4),rgba(255,255,255,100)),url('/assets/img/fondoInicio.jpg')] bg-cover bg-center flex-col gap-5 overflow-hidden isolate"
+  class="contenedor-portada relative min-h-screen container-descripcion flex gap-5 w-[85%] 2xl:justify-center bg-[linear-gradient(to_bottom,rgba(255,255,255,0.4),rgba(255,255,255,100)),url('/assets/img/fondoInicio.jpg')] bg-cover bg-center isolate"
 >
 <app-midescripcion></app-midescripcion>
 </section>
 
-<!-- Sobre mi -->
-<!-- <section class="min-h-screen flex items-center justify-center">
-   <app-portada></app-portada>
-</section> -->
-
 <!-- Sección de cartas proyectos -->
 <section
-  class="min-h-screen flex flex-col gap-4 w-full py-24 md:py-32 bg-secundary dark:bg-background"
+  class="min-h-screen flex flex-col justify-center items-center gap-4 w-full py-24 md:py-32 dark:bg-background" appearOnScroll
 >
-  <div class="flex justify-center items-center">
+  <div class="flex">
     <h2 id="proyectos">Mis proyectos</h2>
   </div>
 
   <router-outlet></router-outlet>
 </section>
 
-<section class="min-h-[50vh] py-10 flex items-center">
+<section class="min-h-[50vh] py-10 flex items-center" appearOnScroll>
   <div class="flex flex-col justify-center items-center gap-4 px-auto mx-auto">
     <h2>Ponte en contacto</h2>
     <p class="text-message w-[50%] text-center">
@@ -44,8 +39,6 @@
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="50"
-          height="50"
           viewBox="0 0 50 50"
           class="w-9 h-9 m-1 hover:stroke-[rgb(0,119,181)] hover:scale-110 transition-transform duration-300"
         >
@@ -60,8 +53,6 @@
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="64"
-          height="64"
           viewBox="0 0 64 64"
           class="w-9 h-9 m-1 hover:stroke-gray-100 hover:scale-110 transition-transform duration-300"
         >
@@ -79,8 +70,6 @@
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="50"
-          height="50"
           viewBox="0 0 50 50"
           class="w-9 h-9 m-1 hover:stroke-red-600 hover:scale-110 transition-transform duration-300"
         >

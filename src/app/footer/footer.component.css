@@ -5,15 +5,20 @@
   border-color: var(--border);
 }
 svg{
-  width: 25px;
-  height: 25px;
+  width: var(--w-25);
+  height: var(--w-25);
   color: var(--muted-foreground);
 }
 p{
-  font-size: var(--font-size-xs);
   color: var(--muted-foreground);
 }
-@media (max-width: 420px) {
+@media (max-width: 700px) {
+  p{
+    font-size: var(--font-size-xs);
+  }
+  h2{
+
+  }
   .contenedor{
     display: flex;
     flex-direction: column;

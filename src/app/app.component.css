@@ -1,10 +1,19 @@
 svg{
+  width: var(--w-);
+  height: var(--w-35);
   color: var(--muted-foreground);
 }
 .text-message{
   color: var(--muted-foreground);
 }
-@media (max-width: 420px) {
+.contenedor-portada{
+ mask-image: linear-gradient(to right,
+      transparent,
+      rgb(2, 2, 2) 5%,
+      rgb(0, 0, 0) 95%,
+      transparent);
+}
+@media (max-width: 700px) {
   .container-descripcion {
     flex-direction: column; /* Apila los elementos en una columna */
   }
