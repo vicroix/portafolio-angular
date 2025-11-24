@@ -6,8 +6,6 @@ import { CommonModule } from '@angular/common';
 import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive';
 import { BackgroundAnimationService } from './background-animation.service';
 
-
-
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, MidescripcionComponent,FooterComponent, CommonModule, AppearOnScrollDirective],

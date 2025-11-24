@@ -1,9 +1,19 @@
 <div
-  class="card flex flex-col bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1" appearOnScroll>
-  <img class="md:h-56 lg:h-64" [src]="'/assets/img/' + imageSrc" [alt]="getTitle" appearOnScroll/>
+  class="card flex flex-col bg-white rounded-xl shadow-sm md:overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+  appearOnScroll
+>
+  <img
+    class="md:h-56 lg:h-64"
+    [src]="'/assets/img/' + imageSrc"
+    [alt]="getTitle"
+    appearOnScroll
+  />
 
   <!-- Resumen del proyecto -->
-  <app-card-content [descripcion]="descripcion" [getTitle]="getTitle"></app-card-content>
+  <app-card-content
+    [descripcion]="descripcion"
+    [getTitle]="getTitle"
+  ></app-card-content>
 
-  <app-card-footer [id]="id"></app-card-footer>
+  <app-card-footer [id]="id" [href]="href"></app-card-footer>
 </div>

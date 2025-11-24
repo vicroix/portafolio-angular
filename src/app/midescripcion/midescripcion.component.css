@@ -16,12 +16,15 @@ background-color: var(--background);
   object-fit: cover;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 720px) {
   a{
     display: none;
   }
   img{
     width: 260px;
+  }
+  .contenedor-sobre-mi{
+    margin-top: 3%;
   }
   .descripcion {
     padding: 1rem;

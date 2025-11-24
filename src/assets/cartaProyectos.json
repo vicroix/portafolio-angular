@@ -3,36 +3,42 @@
     "id": 1,
     "imageSrc": "Megapoly.jpg",
     "getTitle": "Monopoly en Java",
-    "descripcion": "Juego del monopoly versión Java el cual me permitió conocer los fundamentos y mejorar en la programación orientada a objetos."
+    "descripcion": "Juego del monopoly versión Java el cual me permitió conocer los fundamentos y mejorar en la programación orientada a objetos.",
+    "href": "https://github.com/vicroix/monopoly"
   },
   {
     "id": 2,
     "imageSrc": "inicioMipag.jpg",
     "getTitle": "Mi pagina web",
-    "descripcion": "Mi página web es una página creada durante mi aprendizaje en el FP Superior, el cual me permitió aprender PHP, y conectarlo con una base de datos para hacer CRUD."
+    "descripcion": "Mi página web es una página creada durante mi aprendizaje en el FP Superior, el cual me permitió aprender PHP, y conectarlo con una base de datos para hacer CRUD.",
+    "href": "https://github.com/vicroix/Trabajo_Desarrollo_Servidores"
   },
   {
     "id": 3,
     "imageSrc": "ApiPokemon.jpg",
     "getTitle": "API REST Pokemon Frontend/Backend",
-    "descripcion": "Mi primera API REST para entender como usar una API REST obteniendo datos para visualizarlos en mi página web."
+    "descripcion": "Mi primera API REST para entender como usar una API REST obteniendo datos para visualizarlos en mi página web.",
+    "href": "https://github.com/vicroix/Angular_APIREST"
   },
   {
     "id": 4,
     "imageSrc": "Portafolio.png",
     "getTitle": "Mi portafolio en Angular",
-    "descripcion": "Portafolios personal creado con Angular, el cual me permite aprender el uso de componentes, router, y conceptos básicos de Angular."
+    "descripcion": "Portafolios personal creado con Angular, el cual me permite aprender el uso de componentes, router, y conceptos básicos de Angular.",
+    "href": "https://github.com/vicroix/portafolio-angular"
   },
   {
     "id": 5,
     "imageSrc": "teatroGest.jpg",
     "getTitle": "Gestor espacios",
-    "descripcion": "Gestor espacios es un proyecto creado en mi FCT entre varios, el cual usamos Laravel. Hay registro de usuarios, login, además de roles. Dependiendo del rol veras unas vistas en la web. Hay un middleware para proteger las rutas usando Eloquent."
+    "descripcion": "Gestor espacios es un proyecto creado en mi FCT entre varios, el cual usamos Laravel. Hay registro de usuarios, login, además de roles. Dependiendo del rol veras unas vistas en la web. Hay un middleware para proteger las rutas usando Eloquent.",
+    "href": "https://github.com/vicroix/gestion_espacios"
   },
   {
     "id": 6,
     "imageSrc": "InicioFL.png",
     "getTitle": "App web de fichaje laboral",
-    "descripcion": "Aplicación Web creada con Angular, pensada para mejorar más el front con Angular, además de mi primer proyecto para aprender a usar Node.js con Express.js para el back, el cual uso MySQL como base de datos y endpoints en un API REST creada especialmente para la aplicación."
+    "descripcion": "Aplicación Web creada con Angular, pensada para mejorar más el front con Angular, además de mi primer proyecto para aprender a usar Node.js con Express.js para el back, el cual uso MySQL como base de datos y endpoints en un API REST creada especialmente para la aplicación.",
+    "href": "https://github.com/vicroix/gestionfichaje"
   }
 ]

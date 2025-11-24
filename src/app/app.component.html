@@ -6,22 +6,20 @@
 
 <!-- Portada -->
 <section
-  class="contenedor-portada relative min-h-screen container-descripcion justify-center flex gap-5 w-[85%] bg-[linear-gradient(to_bottom,rgba(255,255,255,0.4),rgba(255,255,255,100)),url('/assets/img/fondoInicio.jpg')] bg-cover bg-center isolate"
+class="contenedor-portada relative min-h-screen container-descripcion md:justify-center flex gap-5 md:w-[85%] bg-[linear-gradient(to_bottom,rgba(255,255,255,0.4),rgba(255,255,255,100)),url('/assets/img/fondoInicio.jpg')] bg-cover bg-center isolate"
 >
 <app-midescripcion class="flex justify-center items-start"></app-midescripcion>
 </section>
 
 <!-- Sección de cartas proyectos -->
 <section
-  class="min-h-screen flex flex-col justify-center items-center gap-4 w-full py-24 md:py-32 dark:bg-background" appearOnScroll
+class="min-h-screen flex flex-col justify-center items-center gap-4 w-full py-24 md:py-32 dark:bg-background" appearOnScroll
 >
-  <div class="flex">
-    <h2 id="proyectos">Mis proyectos</h2>
-  </div>
-
+<div class="flex">
+  <h2 id="proyectos">Mis proyectos</h2>
+</div>
   <router-outlet></router-outlet>
 </section>
-
 <section class="min-h-[50vh] py-10 flex items-center" appearOnScroll>
   <div class="flex flex-col justify-center items-center gap-4 px-auto mx-auto">
     <h2>Ponte en contacto</h2>

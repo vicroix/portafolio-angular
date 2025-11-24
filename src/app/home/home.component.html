@@ -1,9 +1,10 @@
-<div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-10">
+<div class="min-w-md max-w-7xl mx-auto xl:px-4 flex flex-wrap justify-center gap-10">
   <app-card class="flex-card" *ngFor="let carta of cartas"
     [imageSrc]="carta.imageSrc"
     [id]="carta.id"
     [getTitle]="carta.getTitle"
-    [descripcion]="carta.descripcion" />
+    [descripcion]="carta.descripcion"
+    [href]="carta.href" />
 </div>
 
 
