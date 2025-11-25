@@ -16,7 +16,7 @@
   {
     "id": 3,
     "imageSrc": "ApiPokemon.jpg",
-    "getTitle": "API REST Pokemon Frontend/Backend",
+    "getTitle": "API REST Pokemon",
     "descripcion": "Mi primera API REST para entender como usar una API REST obteniendo datos para visualizarlos en mi página web.",
     "href": "https://github.com/vicroix/Angular_APIREST"
   },
