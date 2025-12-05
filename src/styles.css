@@ -207,14 +207,14 @@ h4 {
   font-weight: bold;
 }
 p {
-  font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-body));
+  font-size: clamp(var(--font-size-xs), 0.8vw, var(--font-size-body));
   margin: 0;
 }
 a{
-  font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-body));
+  font-size: clamp(var(--font-size-xs), 0.9vw, var(--font-size-body));
 }
 li {
-  font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-body));
+  font-size: clamp(var(--font-size-xs), 0.8vw, var(--font-size-body));
 }
 
 /* Efecto pixel de fondo */
@@ -257,7 +257,6 @@ li {
   justify-content: center;
   gap: 2rem;
   align-items: center;
-  padding-left: 2%;
 }
 .container-app-midescripcion {
   display: flex;
@@ -270,8 +269,8 @@ li {
     #f8dbff 80%,
     var(--background) 100%
   );
-  padding-right: 10rem;
-  padding-left: 10rem;
+  padding-right: clamp(3rem, 10vw, 5rem);
+  padding-left: clamp(3rem, 10vw, 5rem);
 }
 .container-proyects {
   display: flex;

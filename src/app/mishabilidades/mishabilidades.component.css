@@ -24,6 +24,12 @@
 }
 
 @media (max-width: 1120px) {
+  .content-app-mishabilidades{
+    align-items: center;
+  }
+  .content-skills{
+    justify-content: center;
+  }
 }
 
 @media (max-width: 720px) {
