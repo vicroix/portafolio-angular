@@ -1,11 +1,17 @@
-button {
-  border-radius: var(--radius-sm);
+/* Responsive */
+
+@media (max-width: 1720px) {
+
 }
-svg{
-  width: var(--w-15);
-  height: var(--w-15);
+
+@media (max-width: 1120px) {
+
 }
-.card-footer {
-  margin-bottom: 5%;
-  margin-right: 5%;
+
+@media (max-width: 720px) {
+
+}
+
+@media (max-width: 420px) {
+
 }

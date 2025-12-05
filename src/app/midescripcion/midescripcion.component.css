@@ -1,34 +1,99 @@
-.contenedor-sobre-mi{
-margin-top: 12%;
-border-radius: var(--radius-sm);
-box-shadow: 0 0px 10px 5px var(--border);
-background-color: var(--background);
- mask-image: linear-gradient(to right,
-      transparent,
-      rgb(2, 2, 2) 1%,
-      rgb(0, 0, 0) 99%,
-      transparent);
+.content-app-midescripcion {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+  justify-content: center;
+  align-items: center;
 }
-
-.imagenes {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
+.container-my-description {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.container-my-description h1 {
+  color: var(--secondary-foreground);
+}
+.button-resolution-small {
+  display: none;
+}
+.my-description {
+  display: flex;
+  height: 100%;
+  min-height: 300px;
+  gap: 4rem;
+  justify-content: center;
+  align-items: start;
+}
+.my-description-img img {
+  width: 100%;
+  max-width: 520px;
+  max-height: 460px;
+  min-width: 200px;
+  border-radius: 12px;
+}
+.container-my-description-my-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(5rem, 4vw, 10rem);
+}
+.content-my-description-my-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container-my-description .app-mishabilidades-movile {
+  display: none;
+}
+/* Responsive */
 
-@media (max-width: 720px) {
-  a{
+@media (max-width: 1720px) {
+  .button-resolution-high {
     display: none;
   }
-  img{
-    width: 260px;
-  }
-  .contenedor-sobre-mi{
-    margin-top: 3%;
-  }
-  .descripcion {
-    padding: 1rem;
-    text-align:start;
+  .button-resolution-small {
+    display: flex;
   }
 }
 
+@media (max-width: 1635px) {
+  .container-my-description-my-skills .app-mishabilidades-pc {
+    display: none;
+  }
+  .container-my-description .app-mishabilidades-movile {
+    display: block;
+  }
+  .my-description {
+    flex-direction: column;
+  }
+    .my-description-img img {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1120px) {
+  .my-description-img img {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 820px) {
+  .content-app-midescripcion {
+    gap: 1rem;
+  }
+  .my-description {
+    gap: 1rem;
+  }
+
+  .my-description-img img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .content-app-midescripcion a {
+    display: none;
+  }
+}

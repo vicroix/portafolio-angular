@@ -26,14 +26,17 @@ html {
   font-family: Inter, sans-serif;
   font-weight: normal;
 }
+body {
+  min-width: 300px;
+}
 
 @layer base {
   :root {
     /* Temas de colores */
-    --background: hsl(240, 10%, 98%);
+    --background: hsl(240, 10%, 95%);
     --foreground: hsl(240, 5%, 10%);
     --card: hsl(240, 10%, 98%);
-    --card-foreground: hsl(240, 5%, 10%);
+    --card-foreground: hsl(240, 5%, 92%);
     --popover: hsl(240, 10%, 98%);
     --popover-foreground: hsl(240, 5%, 10%);
 
@@ -42,7 +45,7 @@ html {
     --primary-foreground: hsl(0, 0%, 100%);
 
     --secondary: hsl(240, 5%, 96%);
-    --secondary-foreground: hsl(240, 5%, 10%);
+    --secondary-foreground: hsl(240, 25%, 35%);
 
     --muted: hsl(240, 5%, 96%);
     --muted-foreground: hsl(240, 4%, 46%);
@@ -59,14 +62,16 @@ html {
     --ring: hsl(262, 80%, 58%);
 
     /* Tamaño de fuentes */
-    --font-size-title: 30px;
-    --font-size-title-md: 22px;
-    --font-size-title-xs: 16px;
-    --font-size-subtitle: 18px;
-    --font-size-body: 16px;
-    --font-size-sm: 14px;
-    --font-size-xs: 13px;
-    --font-size-2xs: 12px;
+    --font-size-title: 3rem;
+    --font-size-title-md: 2.5rem;
+    --font-size-title-xs: 2rem;
+    --font-size-subtitle: 1.75rem;
+    --font-size-subtitle-md: 1.5rem;
+    --font-size-subtitle-xs: 1.35rem;
+    --font-size-body: 1.25rem;
+    --font-size-sm: 1rem;
+    --font-size-xs: 0.75rem;
+    --font-size-2xs: 0.6rem;
 
     /* Espaciados */
     --spacing-sm: 0.25rem;
@@ -89,7 +94,7 @@ html {
     --background: hsl(240, 10%, 3.9%);
     --foreground: hsl(0, 0%, 98%);
     --card: hsl(240, 10%, 3.9%);
-    --card-foreground: hsl(0, 0%, 98%);
+    --card-foreground: hsl(0, 0%, 20%);
     --popover: hsl(240, 10%, 3.9%);
     --popover-foreground: hsl(0, 0%, 98%);
 
@@ -115,116 +120,7 @@ html {
   }
 }
 
-/* CSS General */
-
-h1,
-h2,
-h3,
-h4,
-p,
-li {
-  font-family: Inter;
-}
-p {
-  margin: 0;
-  font-size: var(--font-size-body);
-}
-h2 {
-  font-size: var(--font-size-title);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-}
-h3{
-  font-size: var();
-  font-weight: 600;
-}
-
-.pixel {
-  position: absolute;
-  width: var(--size, 6px);
-  height: var(--size, 6px);
-  background: var(--primary);
-  box-shadow: 0 0 6px var(--primary), 0 0 12px var(--primary),
-    0 0 18px var(--primary);
-  opacity: 0.9;
-  animation: pixelFloat var(--duration, 4s) linear forwards;
-  border-radius: 2px;
-  transition: filter 0.25s ease, box-shadow 0.25s ease;
-  pointer-events: auto; /* <- importante para que detecte hover */
-}
-
-.pixel:hover {
-  filter: brightness(2);
-  box-shadow: 0 0 8px var(--primary), 0 0 16px var(--primary),
-    0 0 24px var(--primary);
-}
-
-#pixel-background {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1; /* detrás de todo */
-  overflow: visible !important;
-}
-
-@keyframes pixelFloat {
-  0% {
-    transform: translateY(0) scale(0.8);
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-200vh) scale(1);
-    opacity: 0;
-  }
-}
-
-h3 {
-  font-size: var(--font-size-h3);
-}
-
-.bg-primary {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
-}
-
-.bg-secundary {
-  background-color: hsla(240, 5%, 96%, 0.5);
-  color: var(--secondary-foreground);
-  border: transparent;
-}
-.bg-boton-description {
-  border: 1px solid hsl(240 6% 90%);
-}
-.bg-boton-description:hover {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
-}
-
-.hover\:bg-secundary\/80:hover {
-  background-color: var(--secondary);
-}
-
-.hover\:bg-primary\/90:hover {
-  background-color: hsla(262, 80%, 58%, 0.9);
-}
-
-.text-skills {
-  color: var(--secondary-foreground);
-  font-size: 14px;
-  border-radius: 6px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-bottom: 4px;
-  padding-top: 4px;
-  font-weight: 600;
-  font-family: Inter;
-}
-
+/* Fuentes */
 @font-face {
   font-family: "Inter";
   src: url("./assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf")
@@ -233,6 +129,8 @@ h3 {
   font-stretch: 25% 100%;
   font-style: normal;
 }
+
+/* Efectos de secuencias */
 
 @keyframes fadeSlide {
   0% {
@@ -276,41 +174,132 @@ h3 {
   }
 }
 
-.animate-fade-slide {
-  animation: fadeSlide 2s ease-in-out infinite;
-}
-.group:hover .animate-fade-slide {
-  animation: none;
-}
-
-.cambio-color-flecha {
-  fill: linear-gradient(
-    45deg,
-    rgb(54, 26, 62),
-    rgb(34, 17, 39),
-    rgb(255, 105, 180)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: cambioColorFlecha 2s ease-in-out infinite;
+/* Animación de fondo puntos morados */
+@keyframes pixelFloat {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200vh) scale(1);
+    opacity: 0;
+  }
 }
 
-.hover-mover-flecha {
-  animation: moverFlecha 2s ease-in-out infinite;
+/* CSS General */
+h1 {
+  font-size: clamp(var(--font-size-subtitle-md), 3vw, var(--font-size-title));
+  font-weight: bold;
+}
+h2 {
+  font-size: clamp(var(--font-size-xs), 2vw, var(--font-size-title-xs));
+  font-weight: bold;
+}
+h3 {
+  font-size: clamp(var(--font-size-xs), 1.5vw, var(--font-size-subtitle));
+  font-weight: bold;
+}
+h4 {
+  font-size: clamp(var(--font-size-md), 1.5vw, var(--font-size-subtitle-xs));
+  font-weight: bold;
+}
+p {
+  font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-body));
+  margin: 0;
+}
+a{
+  font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-body));
+}
+li {
+  font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-body));
 }
 
-.cambio-color-volver {
+/* Efecto pixel de fondo */
+/* .pixel {
+  position: absolute;
+  width: var(--size, 6px);
+  height: var(--size, 6px);
+  background: var(--primary);
+  box-shadow: 0 0 6px var(--primary), 0 0 12px var(--primary),
+    0 0 18px var(--primary);
+  animation: pixelFloat var(--duration, 4s) linear forwards;
+  border-radius: 2px;
+}
+
+#pixel-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1; 
+  overflow: visible !important;
+} */
+
+/* Containers */
+
+/* app-midescripcion */
+.container-content-web {
+  background-color: var(--background);
+}
+.container-app-root {
+  display: flex;
+  justify-content: center;
+  margin-left: clamp(1%, 10vw, 8%);
+  margin-right: clamp(1%, 10vw, 8%);
+}
+.content-web {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  padding-left: 2%;
+}
+.container-app-midescripcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background: linear-gradient(
-    45deg,
-    rgb(54, 26, 62),
-    rgb(146, 28, 179),
-    rgb(255, 105, 180)
+    #ac8db6 0%,
+    #d1b0d8 10%,
+    #f8dbff 80%,
+    var(--background) 100%
   );
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: cambioColorVolver 3s ease infinite;
+  padding-right: 10rem;
+  padding-left: 10rem;
 }
+.container-proyects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botones */
+
+.btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--primary);
+  width: clamp(10rem ,40vw, 18rem);
+  padding: 1rem;
+  border-radius: 12px;
+  color: var(--primary-foreground);
+}
+.btn-primary:hover{
+  translate: 0 -5px;
+  background-color: var(--primary-hover);
+  box-shadow: 0 6px 12px rgb(94, 68, 68);
+  transition: translate 0.3s ease-in-out;
+}
+
 
 .image-card {
   width: 300px;
@@ -329,21 +318,38 @@ h3 {
   transform: translateY(0);
 }
 
+/* Responsive */
 
-@media (max-width: 1260px){
-  p{
-    font-size: var(--font-size-2xs);
+@media (max-width: 1720px) {
+  body {
+    /* margin-left: 8%; */
+    /* margin-right: 8%; */
   }
-  h1{
-    font-size: var();
+}
+
+@media (max-width: 1120px) {
+  body {
+    /* margin-left: 5%; */
+    /* margin-left: 5%; */
   }
-  h2{
-    font-size: var(--font-size-title-xs);
+}
+
+@media (max-width: 720px) {
+  body {
+    /* margin-left: 2%; */
+    /* margin-right: 2%; */
   }
-  h3{
-    font-size: var(--font-size-title-xs);
+}
+
+@media (max-width: 420px) {
+  body {
+    margin: 0%;
   }
-  .text-skills{
-    font-size: var(--font-size-2xs);
+  .container-app-root {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .container-app-midescripcion {
+    min-height: auto;
   }
 }

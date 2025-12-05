@@ -18,7 +18,7 @@ pixel() {
   e.style.setProperty("--size", `${size}px`);
 
   // Duración aleatoria
-  const duration = Math.random() * 10 + 20;
+  const duration = Math.random() * 10 + 50;
   e.style.setProperty("--duration", `${duration}s`);
 
   // Posición horizontal

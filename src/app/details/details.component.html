@@ -1,8 +1,8 @@
-<section class="contenedor-proyecto flex flex-col items-center">
-  <div class="flex flex-col gap-3 w-[95%] md:w-[80%] min-w-[300px] md:px-[10%]">
+<section class="contenedor-proyecto ">
+  <div class="">
     <!-- Flecha para volver -->
     <div>
-      <a [routerLink]="['']" class="sm:m-4 flex gap-2 items-center">
+      <a [routerLink]="['']" class="">
         <!-- SVG Flecha -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +11,7 @@
           width="15"
           height="15"
           viewBox="0 0 48 48"
-          class="fill-[rgb(169,56,243)] cambio-color-flecha hover-mover-flecha"
+          class="cambio-color-flecha hover-mover-flecha"
         >
           <path
             d="M 34.470703 2.9863281 A 1.50015 1.50015 0 0 0 33.439453 3.4394531 L 13.939453 22.939453 A 1.50015 1.50015 0 0 0 13.939453 25.060547 L 33.439453 44.560547 A 1.50015 1.50015 0 1 0 35.560547 42.439453 L 17.121094 24 L 35.560547 5.5605469 A 1.50015 1.50015 0 0 0 34.470703 2.9863281 z"
@@ -22,11 +22,11 @@
     </div>
 
     <!-- Título del proyecto -->
-    <div class="ml-5 h-10 sm:h-20 mt-3">
-      <h2 class="titulo-detalles flex font-bold">{{ proyecto?.titulo }}</h2>
+    <div class="">
+      <h2 class="titulo-detalles">{{ proyecto?.titulo }}</h2>
     </div>
 
-    <div class="flex flex-col gap-10">
+    <div class="">
       <div
         class="relative max-w-[950px] flex justify-center mx-auto overflow-hidden"
       >
@@ -82,13 +82,13 @@
 
       <!--Contenido de la descripción-->
       <div class="contenedor-detalles">
-        <div class="flex flex-col md:p-8 lg:p-8 xl:p-8 2xl:p-8 sm:mr-5 break-words">
+        <div class="">
           <ng-container *ngFor="let elemento of proyecto?.descripcion">
             <ng-container [ngSwitch]="elemento.tipo">
               <!-- TITULO -->
                  <h3
                    *ngSwitchCase="'titulo'"
-                   class="text-2xl font-semibold text-[rgb(169,56,243)]"
+                   class=""
                  >
                    {{ elemento.contenido }}
                  </h3>
@@ -96,11 +96,11 @@
                  <!-- LISTA -->
                  <ul
                    *ngSwitchCase="'lista-ordenada'"
-                   class="flex flex-wrap gap-x-8 gap-y-2 pl-5 text-gray-700 dark:text-gray-300"
+                   class=""
                  >
                    <li
                      *ngFor="let tecnologias of elemento.contenido"
-                     class="font-bold border-1 border-gray-300 bg-secundary text-skills rounded-md p-3"
+                     class=""
                    >
                      {{ tecnologias }}
                    </li>
@@ -124,10 +124,10 @@
       </div>
 
       <!-- Vídeo y link a git -->
-      <div class="flex flex-col align-middle gap-3 sm:ml-15">
+      <div class="">
         <ng-container *ngIf="proyecto?.video">
           <video
-            class="videos w-160 h-auto shadow-sm"
+            class=""
             [src]="'assets/video/' + proyecto?.video"
             muted
             controls

@@ -1,27 +1,17 @@
-.contenedor{
-  width: 100%;
-  height: calc(var(--spacing) * 30);
-  border-top-width: 1px;
-  border-color: var(--border);
-}
-svg{
-  width: var(--w-25);
-  height: var(--w-25);
-  color: var(--muted-foreground);
-}
-p{
-  color: var(--muted-foreground);
-}
-@media (max-width: 700px) {
-  p{
-    font-size: var(--font-size-xs);
-  }
-  h2{
+/* Responsive */
 
-  }
-  .contenedor{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-  }
+@media (max-width: 1720px) {
+
+}
+
+@media (max-width: 1120px) {
+
+}
+
+@media (max-width: 720px) {
+
+}
+
+@media (max-width: 420px) {
+
 }

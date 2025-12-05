@@ -1,20 +1,17 @@
-.flex-card {
-  flex: 1 1 calc(33.333% - 2.5rem); /* 3 por fila */
-  max-width: 370px;
-  /* padding: 16px; */
+/* Responsive */
+
+@media (max-width: 1720px) {
+
 }
 
-@media (max-width: 1024px) {
-  .flex-card {
-    flex: 1 1 calc(50% - 2.5rem); /* 2 por fila */
-    max-width: 500px;
-  }
+@media (max-width: 1120px) {
+
 }
 
-@media (max-width: 640px) {
-  .flex-card {
-    flex: 1 1 100%; /* 1 por fila */
-    max-width: 350px;
-    max-height: 100%;
-  }
+@media (max-width: 720px) {
+
+}
+
+@media (max-width: 420px) {
+
 }

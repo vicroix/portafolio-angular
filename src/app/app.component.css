@@ -13,21 +13,21 @@ svg{
       rgb(0, 0, 0) 95%,
       transparent);
 }
-@media (max-width: 700px) {
-  .container-descripcion {
-    flex-direction: column; /* Apila los elementos en una columna */
-  }
 
-  .item {
-    font-size: 0.5em; /* Reduce el tamaño de la fuente */
-  }
+/* Responsive */
 
-  body {
-    font-size: 0.4em; /* Reduce el tamaño de la fuente general del body */
-  }
+@media (max-width: 1720px) {
 
-  .menu-contacto,
-  .raton {
-    display: none;
-  }
+}
+
+@media (max-width: 1120px) {
+
+}
+
+@media (max-width: 720px) {
+
+}
+
+@media (max-width: 420px) {
+
 }
