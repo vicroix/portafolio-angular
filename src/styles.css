@@ -34,14 +34,18 @@ body {
   :root {
     /* Temas de colores */
     --background: hsl(240, 10%, 95%);
+    --background-card: hsl(240, 32%, 92%);
     --foreground: hsl(240, 5%, 10%);
+    --foreground-hover: hsl(240, 5%, 20%);
+    --foreground-active: hsl(240, 3%, 30%);
     --card: hsl(240, 10%, 98%);
-    --card-foreground: hsl(240, 5%, 92%);
+    --card-foreground: hsla(0, 0%, 99%, 0.877);
     --popover: hsl(240, 10%, 98%);
-    --popover-foreground: hsl(240, 5%, 10%);
+    --popover-foreground: hsl(294, 17%, 66%);
 
     --primary: hsl(262, 80%, 58%);
     --primary-hover: hsl(262, 80%, 50%);
+    --primary-active: hsl(262, 78%, 61%);
     --primary-foreground: hsl(0, 0%, 100%);
 
     --secondary: hsl(240, 5%, 96%);
@@ -100,6 +104,7 @@ body {
 
     --primary: hsl(262, 80%, 58%);
     --primary-hover: hsl(262, 80%, 50%);
+    --primary-active: hsl(262, 50%, 57%);
     --primary-foreground: hsl(0, 0%, 100%);
 
     --secondary: hsl(240, 4%, 10%);
@@ -203,41 +208,19 @@ h3 {
   font-weight: bold;
 }
 h4 {
-  font-size: clamp(var(--font-size-md), 1.5vw, var(--font-size-subtitle-xs));
+  font-size: clamp(var(--font-size-xs), 1.5vw, var(--font-size-body));
   font-weight: bold;
 }
 p {
-  font-size: clamp(var(--font-size-xs), 0.8vw, var(--font-size-body));
+  font-size: clamp(var(--font-size-2xs), 0.9vw, var(--font-size-sm));
   margin: 0;
 }
-a{
-  font-size: clamp(var(--font-size-xs), 0.9vw, var(--font-size-body));
+a {
+  font-size: clamp(var(--font-size-2xs), 1vw, var(--font-size-sm));
 }
 li {
   font-size: clamp(var(--font-size-xs), 0.8vw, var(--font-size-body));
 }
-
-/* Efecto pixel de fondo */
-/* .pixel {
-  position: absolute;
-  width: var(--size, 6px);
-  height: var(--size, 6px);
-  background: var(--primary);
-  box-shadow: 0 0 6px var(--primary), 0 0 12px var(--primary),
-    0 0 18px var(--primary);
-  animation: pixelFloat var(--duration, 4s) linear forwards;
-  border-radius: 2px;
-}
-
-#pixel-background {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1; 
-  overflow: visible !important;
-} */
 
 /* Containers */
 
@@ -264,11 +247,17 @@ li {
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(
+    #e4caec 0%,
+    #dac7df 10%,
+    #f8dbff 80%,
+    var(--background) 100%
+  );
+  /* background: linear-gradient(
     #ac8db6 0%,
     #d1b0d8 10%,
     #f8dbff 80%,
     var(--background) 100%
-  );
+  ); */
   padding-right: clamp(3rem, 10vw, 5rem);
   padding-left: clamp(3rem, 10vw, 5rem);
 }
@@ -280,25 +269,6 @@ li {
 }
 
 /* Botones */
-
-.btn-primary {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  background-color: var(--primary);
-  width: clamp(10rem ,40vw, 18rem);
-  padding: 1rem;
-  border-radius: 12px;
-  color: var(--primary-foreground);
-}
-.btn-primary:hover{
-  translate: 0 -5px;
-  background-color: var(--primary-hover);
-  box-shadow: 0 6px 12px rgb(94, 68, 68);
-  transition: translate 0.3s ease-in-out;
-}
-
 
 .image-card {
   width: 300px;
@@ -318,25 +288,13 @@ li {
 }
 
 /* Responsive */
-
-@media (max-width: 1720px) {
-  body {
-    /* margin-left: 8%; */
-    /* margin-right: 8%; */
-  }
-}
-
-@media (max-width: 1120px) {
-  body {
-    /* margin-left: 5%; */
-    /* margin-left: 5%; */
-  }
-}
-
 @media (max-width: 720px) {
-  body {
-    /* margin-left: 2%; */
-    /* margin-right: 2%; */
+  .container-app-midescripcion {
+    min-height: auto;
+  }
+  .container-app-root {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -344,10 +302,7 @@ li {
   body {
     margin: 0%;
   }
-  .container-app-root {
-    margin-left: 0;
-    margin-right: 0;
-  }
+
   .container-app-midescripcion {
     min-height: auto;
   }

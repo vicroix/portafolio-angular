@@ -1,17 +1,8 @@
-/* Responsive */
-
-@media (max-width: 1720px) {
-
-}
-
-@media (max-width: 1120px) {
-
-}
-
-@media (max-width: 720px) {
-
-}
-
-@media (max-width: 420px) {
-
+.container-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }

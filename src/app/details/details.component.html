@@ -1,143 +1,151 @@
-<section class="contenedor-proyecto ">
-  <div class="">
-    <!-- Flecha para volver -->
-    <div>
-      <a [routerLink]="['']" class="">
-        <!-- SVG Flecha -->
+<section class="container-proyect">
+  <!-- Flecha para volver -->
+  <div class="container-button-back">
+    <a [routerLink]="['']" class="button-back">
+      <!-- SVG Flecha -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="15"
+        height="15"
+        viewBox="0 0 48 48"
+        class="cambio-color-flecha hover-mover-flecha"
+        fill="currentColor"
+      >
+        <path
+          d="M 34.470703 2.9863281 A 1.50015 1.50015 0 0 0 33.439453 3.4394531 L 13.939453 22.939453 A 1.50015 1.50015 0 0 0 13.939453 25.060547 L 33.439453 44.560547 A 1.50015 1.50015 0 1 0 35.560547 42.439453 L 17.121094 24 L 35.560547 5.5605469 A 1.50015 1.50015 0 0 0 34.470703 2.9863281 z"
+        ></path>
+      </svg>
+      <p [ngClass]="fontH2" class="cambio-color-volver">Volver</p>
+    </a>
+  </div>
+
+  <!-- Título del proyecto -->
+  <div>
+    <h2 class="titulo-detalles">{{ proyecto?.titulo }}</h2>
+  </div>
+
+  <div class="container-content-proyects">
+    <div class="container-imgs">
+      <!-- Imagen -->
+      <div
+        class="container-img"
+        [style.transform]="'translateX(-' + indiceActual * 100 + '%)'"
+      >
+        <img
+          *ngFor="let img of proyecto.imagen"
+          class="object-contain w-full h-full"
+          [src]="'assets/img/' + img"
+          [alt]="proyecto.titulo"
+        />
+      </div>
+
+      <!-- Flecha izquierda -->
+      <button
+        id="arrowCaruselLeft"
+        class="arrow-left button-carusel-arrow"
+        (click)="anterior()"
+      >
         <svg
+          class="svg-caruselArrow"
           xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="15"
-          height="15"
-          viewBox="0 0 48 48"
-          class="cambio-color-flecha hover-mover-flecha"
+          viewBox="0 0 24 24"
         >
           <path
-            d="M 34.470703 2.9863281 A 1.50015 1.50015 0 0 0 33.439453 3.4394531 L 13.939453 22.939453 A 1.50015 1.50015 0 0 0 13.939453 25.060547 L 33.439453 44.560547 A 1.50015 1.50015 0 1 0 35.560547 42.439453 L 17.121094 24 L 35.560547 5.5605469 A 1.50015 1.50015 0 0 0 34.470703 2.9863281 z"
-          ></path>
-        </svg>
-        <label [ngClass]="fontH2" class="cambio-color-volver">Volver</label>
-      </a>
-    </div>
-
-    <!-- Título del proyecto -->
-    <div class="">
-      <h2 class="titulo-detalles">{{ proyecto?.titulo }}</h2>
-    </div>
-
-    <div class="">
-      <div
-        class="relative max-w-[950px] flex justify-center mx-auto overflow-hidden"
-      >
-        <!-- Imagen -->
-        <div
-          class="flex max-h-[450px] sm:h-full transition-transform duration-500"
-          [style.transform]="'translateX(-' + indiceActual * 100 + '%)'"
-        >
-          <img
-            *ngFor="let img of proyecto.imagen"
-            class="object-contain w-full h-full"
-            [src]="'assets/img/' + img"
-            [alt]="proyecto.titulo"
+            fill="currentColor"
+            d="m7.825 13l4.9 4.9q.3.3.288.7t-.313.7q-.3.275-.7.288t-.7-.288l-6.6-6.6q-.15-.15-.213-.325T4.426 12t.063-.375t.212-.325l6.6-6.6q.275-.275.688-.275t.712.275q.3.3.3.713t-.3.712L7.825 11H19q.425 0 .713.288T20 12t-.288.713T19 13z"
           />
-        </div>
+        </svg>
+      </button>
 
-        <!-- Flecha izquierda -->
-        <button
-          id="arrowCaruselLeft"
-          class="absolute button-carusel-arrow top-1/2 left-10 -translate-y-1/2 px-3 py-1 rounded-full"
-          (click)="anterior()"
+      <!-- Flecha derecha -->
+      <button
+        id="arrowCaruselRight"
+        class="arrow-right button-carusel-arrow"
+        (click)="siguiente()"
+      >
+        <svg
+          class="svg-caruselArrow"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
         >
-          <svg
-            class="svg-caruselArrow"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentColor"
-              d="m7.825 13l4.9 4.9q.3.3.288.7t-.313.7q-.3.275-.7.288t-.7-.288l-6.6-6.6q-.15-.15-.213-.325T4.426 12t.063-.375t.212-.325l6.6-6.6q.275-.275.688-.275t.712.275q.3.3.3.713t-.3.712L7.825 11H19q.425 0 .713.288T20 12t-.288.713T19 13z"
-            />
-          </svg>
-        </button>
+          <path
+            fill="currentColor"
+            d="M16.175 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.175l-4.9-4.9q-.3-.3-.288-.7t.313-.7q.3-.275.7-.288t.7.288l6.6 6.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-6.6 6.6q-.275.275-.687.275T11.3 19.3q-.3-.3-.3-.712t.3-.713z"
+          />
+        </svg>
+      </button>
+    </div>
 
-        <!-- Flecha derecha -->
-        <button
-          id="arrowCaruselRight"
-          class="absolute button-carusel-arrow top-1/2 right-11 -translate-y-1/2 px-3 py-1 rounded-full"
-          (click)="siguiente()"
-        >
-          <svg
-            class="svg-caruselArrow"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentColor"
-              d="M16.175 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.175l-4.9-4.9q-.3-.3-.288-.7t.313-.7q.3-.275.7-.288t.7.288l6.6 6.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-6.6 6.6q-.275.275-.687.275T11.3 19.3q-.3-.3-.3-.712t.3-.713z"
-            />
-          </svg>
-        </button>
-      </div>
+    <!--Contenido de la descripción-->
+    <div class="content-details-proyect">
+      <ng-container *ngFor="let elemento of proyecto?.descripcion">
+        <ng-container [ngSwitch]="elemento.tipo">
+          <!-- TITULO -->
+          <h4 *ngSwitchCase="'titulo'">
+            {{ elemento.contenido }}
+          </h4>
 
-      <!--Contenido de la descripción-->
-      <div class="contenedor-detalles">
-        <div class="">
-          <ng-container *ngFor="let elemento of proyecto?.descripcion">
-            <ng-container [ngSwitch]="elemento.tipo">
-              <!-- TITULO -->
-                 <h3
-                   *ngSwitchCase="'titulo'"
-                   class=""
-                 >
-                   {{ elemento.contenido }}
-                 </h3>
-   
-                 <!-- LISTA -->
-                 <ul
-                   *ngSwitchCase="'lista-ordenada'"
-                   class=""
-                 >
-                   <li
-                     *ngFor="let tecnologias of elemento.contenido"
-                     class=""
-                   >
-                     {{ tecnologias }}
-                   </li>
-                 </ul>
-   
-                 <ol *ngSwitchCase="'lista-desordenada'" class="pl-5">
-                   <li *ngFor="let tecnologias of elemento.contenido">
-                     {{ tecnologias }}
-                   </li>
-                 </ol>
-                 <!-- PÁRRAFO -->
-                 <p
-                   *ngSwitchCase="'parrafo'"
-                   class="leading-relaxed"
-                   [ngClass]="elemento?.clases"
-                   [innerHTML]="elemento.contenido"
-                 ></p>
-            </ng-container>
-          </ng-container>
-        </div>
-      </div>
-
-      <!-- Vídeo y link a git -->
-      <div class="">
-        <ng-container *ngIf="proyecto?.video">
-          <video
-            class=""
-            [src]="'assets/video/' + proyecto?.video"
-            muted
-            controls
-            playsinline
-          ></video>
+          <!-- LISTA -->
+          <ul *ngSwitchCase="'lista-ordenada'" class="content-tech">
+            <p
+              *ngFor="let tecnologias of elemento.contenido"
+              class="text-tech"
+            >
+              {{ tecnologias }}
+          </p>
+          </ul>
+          <ol *ngSwitchCase="'lista-desordenada'" class="content-ol">
+            <li *ngFor="let tecnologias of elemento.contenido">
+              {{ tecnologias }}
+            </li>
+          </ol>
+          <!-- PÁRRAFO -->
+          <p
+            *ngSwitchCase="'parrafo'"
+            class="leading-relaxed"
+            [ngClass]="elemento?.clases"
+            [innerHTML]="elemento.contenido"
+          ></p>
         </ng-container>
+      </ng-container>
+    </div>
 
+    <!-- Vídeo y link a git -->
+    <div class="container-video-and-button">
+      <ng-container *ngIf="proyecto?.video">
+        <video
+          class=""
+          [src]="'assets/video/' + proyecto?.video"
+          muted
+          controls
+          playsinline
+        ></video>
+      </ng-container>
+      <div class="content-back-and-git">
+        <!-- Flecha para volver -->
+        <a [routerLink]="['']" class="button-back">
+          <!-- SVG Flecha -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="15"
+            height="15"
+            viewBox="0 0 48 48"
+            class="cambio-color-flecha hover-mover-flecha"
+            fill="currentColor"
+          >
+            <path
+              d="M 34.470703 2.9863281 A 1.50015 1.50015 0 0 0 33.439453 3.4394531 L 13.939453 22.939453 A 1.50015 1.50015 0 0 0 13.939453 25.060547 L 33.439453 44.560547 A 1.50015 1.50015 0 1 0 35.560547 42.439453 L 17.121094 24 L 35.560547 5.5605469 A 1.50015 1.50015 0 0 0 34.470703 2.9863281 z"
+            ></path>
+          </svg>
+          <p [ngClass]="fontH2" class="cambio-color-volver">Volver</p>
+        </a>
         <a
           [href]="proyecto?.enlace"
-          [ngClass]="botonGit1"
+          Class="btn-git"
           [title]="proyecto?.enlace"
           target="_blank"
         >

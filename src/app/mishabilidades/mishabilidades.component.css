@@ -18,10 +18,8 @@
   padding-top: 4px;
   font-weight: 600;
 }
-/* Responsive */
 
-@media (max-width: 1720px) {
-}
+/* Responsive */
 
 @media (max-width: 1120px) {
   .content-app-mishabilidades{
@@ -32,8 +30,3 @@
   }
 }
 
-@media (max-width: 720px) {
-}
-
-@media (max-width: 420px) {
-}

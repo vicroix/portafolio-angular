@@ -1,10 +1,10 @@
-<div class="">
-  <app-card class="flex-card" *ngFor="let carta of cartas"
+<div class="container-app-card">
+  <app-card
+    *ngFor="let carta of cartas"
     [imageSrc]="carta.imageSrc"
     [id]="carta.id"
     [getTitle]="carta.getTitle"
     [descripcion]="carta.descripcion"
-    [href]="carta.href" />
+    [href]="carta.href"
+  />
 </div>
-
-

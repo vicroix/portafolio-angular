@@ -17,14 +17,10 @@
       },
       {
         "tipo": "lista-ordenada",
-        "contenido": [
-          "Java",
-          "Netbeans",
-          "Swing"
-        ]
+        "contenido": ["Java", "Netbeans", "Swing"]
       },
       {
-       "tipo": "titulo",
+        "tipo": "titulo",
         "contenido": "Objetivo"
       },
       {
@@ -54,97 +50,55 @@
       },
       {
         "tipo": "lista-desordenada",
-        "contenido": [
-          "Casillas", "Dado", "Juego", "Jugador", "Tablero"
-        ]
+        "contenido": ["Casillas", "Dado", "Juego", "Jugador", "Tablero"]
       },
       {
         "tipo": "titulo",
-        "contenido":"Jugador"
+        "contenido": "Jugador"
       },
       {
         "tipo": "parrafo",
-        "contenido": "Representa a un jugador. Éste tiene los atributos de nombre, número de jugador, banco, victorias, derrotas, penalización y posición"
-      },
-      {
-        "tipo":"parrafo",
-        "contenido": [
-          "Métodos para obtener y establecer esos atributos, como getBanco(), setBancoSumar() y setNombre()", "setBancoSumar()"
-        ]
+        "contenido": "Representa a un jugador. Éste tiene los atributos de nombre, número de jugador, banco, victorias, derrotas, penalización y posición. Métodos para obtener y establecer esos atributos, como getBanco(), setBancoSumar() y setNombre(), setBancoSumar()."
       },
       {
         "tipo": "titulo",
-        "contenido":"Dado"
+        "contenido": "Dado"
       },
       {
         "tipo": "parrafo",
         "contenido": "Representa al dado. Tiene atributos como el número que muestra el dado y na ficha asociada."
       },
       {
-        "tipo":"lista-desordenada",
+        "tipo": "lista-desordenada",
         "contenido": [
-          "Métodos para tirar el dado tirarDados()", "Comprobar si el dado es válido comprobarBDado()"
+          "Métodos para tirar el dado tirarDados()",
+          "Comprobar si el dado es válido comprobarBDado()"
         ]
       },
       {
         "tipo": "titulo",
-        "contenido":"Juego"
+        "contenido": "Juego"
       },
       {
         "tipo": "parrafo",
-        "contenido": "Controla la lógica del juego. Tiene atributos como las opciones de comprar, vender, pasar turno y quén está en turno"
-      },
-      {
-        "tipo":"lista-desordenada",
-        "contenido": [
-          "Métodos para verificar y cambiar estos estados, como comprobarBComprar(), venderCasilla(), y comprobarBPasarTurno()"
-        ]
+        "contenido": "Controla la lógica del juego. Tiene atributos como las opciones de comprar, vender, pasar turno y de quién es el turno actual, entre otros. También métodos para verificar y cambiar estos estados conforme se avanza y cambia la partida."
       },
       {
         "tipo": "titulo",
-        "contenido":"Casillas"
+        "contenido": "Casillas"
       },
       {
         "tipo": "parrafo",
         "contenido": "Maneja las casillas en el juego, incluyendo la compra, visualización y reset de las casillas."
       },
       {
-        "tipo": "lista-desordenada",
-        "contenido": [
-          "cargarVisualizarCallesCompradas(): Muestra las calles compradas por los jugadores", "comprarCasilla(): Permite a un jugador comprar una casilla, asignándosela si no pertenece a nadie", "desactivarCallesCompradas(): Desactiva al visualización de las calles compradas", "getCasillas(), getValorCasilla(), getCasillasCompradas(): Obtienen información de las casillas", "imprimirContenido(): Imprime el contenido de las casillas", "nuevaPartidaResetearCalles(): Resetea las visualizaciones de las calles al iniciar una nueva partida", "valorCasilla(): Calcula el valor de una casilla dependiendo de la posicion y el dado", "visualizarCallesCompradas(): Muestra las calles compradas por un jugador en el visualizador"
-        ]
-      },
-      {
         "tipo": "titulo",
-        "contenido":"Tablero"
+        "contenido": "Tablero"
       },
       {
         "tipo": "parrafo",
-        "contenido": "Esta clase es la representación visual y lógica del tablero de juego. Hereda de JFrame y maneja la interacción entre los jugadores y las casillas del juego"
-      },
-      {
-        "tipo": "lista-desordenada",
-        "contenido": [
-          "JTextField Calle2: Campo de texto para una calle.",
-          "JPanel Casilla2: Panel que representa una casilla en el tablero.",
-          "Casillas casillas: Instancia de la clase Casillas que maneja las casillas del tablero.",
-          "JPanel[] casillasJ1, casillasJ2: Arrays de paneles que representan las casillas de cada jugador.",
-          "Dado dado: Objeto para manejar el dado del juego.",
-          "Jugador jugador1, jugador2: Los dos jugadores del juego.",
-          "Jugador[] jugadores: Array que contiene los jugadores.",
-          "JPanel Tablero: Panel que contiene el tablero.",
-          "static Juego turno: Representa el turno del juego."
-        ]
-      },{
-        "tipo": "lista-desordenada",
-        "contenido": ["main(): Método principal para iniciar la aplicación.",
-    "siAmbosJugadoresPenalizacion(): Si ambos jugadores caen en la cárcel, maneja las penalizaciones.",
-    "comprobarCasillaJ1(), comprobarCasillaJ2(): Métodos para comprobar si una casilla está comprada por el otro jugador.",
-    "evaluarParaVenderCalle(): Evalúa si una casilla puede ser vendida.",
-    "visualizarTablero(): Muestra el tablero visualmente y asigna una imagen a cada jugador."]
-
+        "contenido": "Esta clase es la representación visual y lógica del tablero de juego. Hereda de JFrame y maneja la interacción entre los jugadores y las casillas del juego."
       }
-
     ],
     "imagen": ["Megapoly.jpg"],
     "enlace": "https://github.com/vicroix/monopoly"
@@ -160,7 +114,6 @@
       {
         "tipo": "parrafo",
         "contenido": "Página web para tienda virtual con autentificación que accede a base de datos usando sentencias SQL, javascript y php"
-
       },
       {
         "tipo": "titulo",
@@ -222,8 +175,7 @@
           "Frontend: Angular 19, TypeScript",
           "Estilizado: Tailwind CSS",
           "Comunicación HTTP: Angular HttpClient"
-        ],
-        "clases": "list-disc list-inside space-y-2 text-lg"
+        ]
       },
       {
         "tipo": "titulo",
@@ -295,7 +247,7 @@
   },
   {
     "id": "4",
-    "titulo": "Portafolios en Angular",
+    "titulo": "Portafolio en Angular",
     "descripcion": [
       {
         "tipo": "titulo",
@@ -311,13 +263,7 @@
       },
       {
         "tipo": "lista-ordenada",
-        "contenido": [
-          "Node.js",
-          "Angular",
-          "TypeScript",
-          "Tailwind CSS"
-        ],
-        "clases": "list-disc list-inside space-y-2 text-lg"
+        "contenido": ["Node.js", "Angular", "TypeScript", "Tailwind CSS", "JSON"]
       }
     ],
     "imagen": ["Portafolio.png"],
@@ -333,11 +279,11 @@
       },
       {
         "tipo": "parrafo",
-        "contenido":"He realizado durante mis prácticas un proyecto ambicioso, cuyo objetivo de la aplicación web es <strong>gestionar espacios de teatro.</strong>"
+        "contenido": "He realizado durante mis prácticas un proyecto ambicioso, cuyo objetivo de la aplicación web es <strong>gestionar espacios de teatro.</strong>"
       },
       {
         "tipo": "parrafo",
-        "contenido":"Tienes dos <strong>roles, administrador y profesor</strong>. Los profesores pueden realizar reservas, editar reservas o eliminarlas. Mientras que el administrador puede gestionar los espacios, añadir nuevos espacios, editarlos y eliminarlos."
+        "contenido": "Tienes dos <strong>roles, administrador y profesor</strong>. Los profesores pueden realizar reservas, editar reservas o eliminarlas. Mientras que el administrador puede gestionar los espacios, añadir nuevos espacios, editarlos y eliminarlos."
       },
       {
         "tipo": "titulo",
@@ -345,23 +291,15 @@
       },
       {
         "tipo": "lista-ordenada",
-        "contenido": [
-          "Laravel",
-          "TailwindCSS",
-          "Alpine.js",
-          "MySQL"
-        ],
-        "clases": "list-disc list-inside space-y-2 text-lg"
+        "contenido": ["Laravel", "TailwindCSS", "Alpine.js", "MySQL"]
       },
       {
-        "tipo":"titulo",
+        "tipo": "titulo",
         "contenido": "Entorno de desarrollo:"
       },
       {
         "tipo": "lista-ordenada",
-        "contenido": [
-          "Apache (XAMPP)"
-        ]
+        "contenido": ["Apache (XAMPP)"]
       },
       {
         "tipo": "titulo",
@@ -369,12 +307,9 @@
       },
       {
         "tipo": "lista-ordenada",
-        "contenido": [
-          "Choices.js"
-        ],
-        "clases": "list-disc list-inside space-y-2 text-lg"
+        "contenido": ["Choices.js"]
       },
-          {
+      {
         "tipo": "titulo",
         "contenido": "APIs integradas:"
       },
@@ -384,8 +319,7 @@
           "FullCalendar API",
           "Mapbox GL JS",
           "Elfsight Reviews Widget (con reseñas de Google)"
-        ],
-        "clases": "list-disc list-inside space-y-2 text-lg"
+        ]
       },
       {
         "tipo": "titulo",
@@ -433,88 +367,92 @@
       },
       {
         "tipo": "parrafo",
-        "contenido": "He crado un vídeo narrado con imágenes y marcadores visuales para explicar el funcionamiento de teatroGest de forma clara y guiada.",
-        "clases": "texto-detalles bg-gradient-to-r from-yellow-300 to-orange-400 text-black px-1 rounded"
+        "contenido": "He crado un vídeo narrado con imágenes y marcadores visuales para explicar el funcionamiento de teatroGest de forma clara y guiada."
       }
     ],
     "imagen": ["teatroGest.jpg"],
     "enlace": "https://github.com/vicroix/gestion_espacios",
     "video": "videoComercial.mp4"
   },
-{
-  "id": "6",
-  "titulo": "Aplicación Web de Fichaje Laboral",
-  "descripcion": [
-     {
-      "tipo": "titulo",
-      "contenido": "Tecnologías principales:"
-    },
+  {
+    "id": "6",
+    "titulo": "Aplicación Web de Fichaje Laboral",
+    "descripcion": [
+      {
+        "tipo": "titulo",
+        "contenido": "Tecnologías principales:"
+      },
+      {
+        "tipo": "lista-ordenada",
+        "contenido": ["Angular", "Node.js", "Express.js", "MySQL", "Boostrap"]
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Entorno de desarrollo:"
+      },
+      {
+        "tipo": "lista-ordenada",
+        "contenido": ["Node.js", "Angular CLI", "npm", "VS CODE", "Git"]
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Detalles del Proyecto"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "He creado una aplicación web de fichaje laboral para gestionar entradas, salidas y reservas de manera eficiente, usando Angular en el frontend y Node.js con Express.js en el backend."
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Puntos clave del proyecto"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Diseñé la arquitectura completa del backend, incluyendo la base de datos y las relaciones entre usuarios y fichajes. Implementé funcionalidades para fichar entradas y salidas, teniendo la opción de pausar y reanudar durante el día, y visualizar los datos de manera clara y dinámica. Creé un flujo frontend-backend totalmente integrado y responsivo, asegurando que la aplicación funcione correctamente en cualquier dispositivo."
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Mejoras y motivación"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Aunque el proyecto nació como práctica personal, añadí mejoras de interfaz, experiencia de usuario y funcionalidades avanzadas, demostrando iniciativa y capacidad de aprendizaje autónomo. Optimicé la interfaz y la experiencia móvil para que la navegación sea fluida y cómoda en cualquier dispositivo."
+      }
+    ],
+    "imagen": [
+      "inicioTrasLogin.jpg",
+      "perfilUsuario.jpg",
+      "guardarSalario.jpg",
+      "empezarTurno.jpg",
+      "pausarTurno.jpg",
+      "terminarTurno.jpg",
+      "mostrarTurnoCompletado.jpg"
+    ],
+    "enlace": "https://github.com/vicroix/gestionfichaje",
+    "enlace2": "https://github.com/vicroix/backend_fichaje"
+  },
     {
-      "tipo": "lista-ordenada",
-      "contenido": [
-        "Angular",
-        "Node.js",
-        "Express.js",
-        "MySQL",
-        "Boostrap"
-      ],
-      "clases": "list-disc list-inside space-y-2 text-lg"
-    },
-    {
-      "tipo":"titulo",
-      "contenido": "Entorno de desarrollo:"
-    },
-    {
-      "tipo": "lista-ordenada",
-      "contenido": [
-        "Node.js",
-        "Angular CLI",
-        "npm",
-        "VS CODE",
-        "Git"
-      ]
-    },
-    {
-      "tipo": "titulo",
-      "contenido": "Detalles del Proyecto"
-    },
-    {
-      "tipo": "parrafo",
-      "contenido": "He creado una aplicación web de fichaje laboral para gestionar entradas, salidas y reservas de manera eficiente, usando Angular en el frontend y Node.js con Express.js en el backend."
-    },
-    {
-      "tipo": "titulo",
-      "contenido": "Puntos clave del proyecto"
-    },
-    {
-      "tipo": "parrafo",
-      "contenido": "Diseñé la arquitectura completa del backend, incluyendo la base de datos y las relaciones entre usuarios y fichajes."
-    },
-    {
-      "tipo": "parrafo",
-      "contenido": "Implementé funcionalidades para fichar entradas y salidas, teniendo la opción de pausar y reanudar durante el día, y visualizar los datos de manera clara y dinámica."
-    },
-    {
-      "tipo": "parrafo",
-      "contenido": "Creé un flujo frontend-backend totalmente integrado y responsivo, asegurando que la aplicación funcione correctamente en cualquier dispositivo."
-    },
-    {
-      "tipo": "titulo",
-      "contenido": "Mejoras y motivación"
-    },
-    {
-      "tipo": "parrafo",
-      "contenido": "Aunque el proyecto nació como práctica personal, añadí mejoras de interfaz, experiencia de usuario y funcionalidades avanzadas, demostrando iniciativa y capacidad de aprendizaje autónomo."
-    },
-    {
-      "tipo": "parrafo",
-      "contenido": "Optimicé la interfaz y la experiencia móvil para que la navegación sea fluida y cómoda en cualquier dispositivo."
-    }
-  ],
-  "imagen": ["inicioTrasLogin.jpg", "perfilUsuario.jpg","guardarSalario.jpg", "empezarTurno.jpg", "pausarTurno.jpg", "terminarTurno.jpg", "mostrarTurnoCompletado.jpg"],
-  "enlace": "https://github.com/vicroix/gestionfichaje",
-  "enlace2": "https://github.com/vicroix/backend_fichaje"
-}
-
+    "id": "7",
+    "titulo": "Portafolio v2",
+    "descripcion": [
+      {
+        "tipo": "titulo",
+        "contenido": "Detalles del Proyecto"
+      },
+      {
+        "tipo": "parrafo",
+        "contenido": "Desarrollado en Angular. Asimismo, retiré las nomenclaturas de TailwindCSS para utilizar CSS tradicional y mejorar mi dominio de estilado."
+      },
+      {
+        "tipo": "titulo",
+        "contenido": "Características"
+      },
+      {
+        "tipo": "lista-ordenada",
+        "contenido": ["Node.js", "Angular", "TypeScript", "JSON"]
+      }
+    ],
+    "imagen": ["NuevoDiseñoPortafolio.jpg", "portafolioProyectos.jpg", "portafolioDetalles.jpg"],
+    "enlace": "https://github.com/vicroix/portafolio-angular"
+  }
 ]
-

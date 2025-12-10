@@ -31,14 +31,21 @@
     "id": 5,
     "imageSrc": "teatroGest.jpg",
     "getTitle": "Gestor espacios",
-    "descripcion": "Gestor espacios es un proyecto creado en mi FCT entre varios, el cual usamos Laravel. Hay registro de usuarios, login, además de roles. Dependiendo del rol veras unas vistas en la web. Hay un middleware para proteger las rutas usando Eloquent.",
+    "descripcion": "Gestor espacios, el cual usamos Laravel. Hay registro de usuarios, login, además de roles. Todo pensado para mejorar la seguridad y experiencia del usuario.",
     "href": "https://github.com/vicroix/gestion_espacios"
   },
   {
     "id": 6,
     "imageSrc": "InicioFL.png",
     "getTitle": "App web de fichaje laboral",
-    "descripcion": "Aplicación Web creada con Angular, pensada para mejorar más el front con Angular, además de mi primer proyecto para aprender a usar Node.js con Express.js para el back, el cual uso MySQL como base de datos y endpoints en un API REST creada especialmente para la aplicación.",
+    "descripcion": "Aplicación Web creada con Angular, Node.js (Express.js) y MySQL como base de datos y endpoints en un API REST creada especialmente para la aplicación.",
+    "href": "https://github.com/vicroix/gestionfichaje"
+  },
+    {
+    "id": 7,
+    "imageSrc": "NuevoDiseñoPortafolio.jpg",
+    "getTitle": "Portafolio v2",
+    "descripcion": "Nuevo diseño del portafolio más moderno y atractivo, mejor estructurado y modularizado, y un mejor responsive para todos los dispositivos.",
     "href": "https://github.com/vicroix/gestionfichaje"
   }
 ]

@@ -15,6 +15,23 @@
 .container-my-description h1 {
   color: var(--secondary-foreground);
 }
+.view-proyects-button {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-inline: 2rem;
+  padding-block: 0.85rem;
+  box-shadow: 0 2px 2px gray;
+  border-radius: 12px;
+  background-color: var(--primary);
+  font-weight: bold;
+  color: aliceblue;
+  transition: all 0.15s ease-in;
+}
+.view-proyects-button:hover {
+  box-shadow: 0 4px 8px rgb(185, 185, 185);
+  background-color: var(--primary-hover);
+}
 .button-resolution-small {
   display: none;
 }
@@ -45,6 +62,7 @@
 .container-my-description .app-mishabilidades-movile {
   display: none;
 }
+
 /* Responsive */
 
 @media (max-width: 1720px) {
@@ -56,15 +74,12 @@
   }
 }
 
-@media (max-width: 1635px) {
-}
-
 @media (max-width: 1120px) {
   .my-description-img img {
     margin-top: 1rem;
     max-width: 600px;
   }
-  .container-my-description-my-skills{
+  .container-my-description-my-skills {
     text-align: center;
   }
   .container-my-description-my-skills .app-mishabilidades-pc {
@@ -83,18 +98,8 @@
   }
 }
 
-@media (max-width: 820px) {
-  .content-app-midescripcion {
-    gap: 4rem;
-  }
-  .my-description {
-    gap: 1rem;
-  }
-}
-@media (max-width: 467px) {
+@media (max-width: 720px) {
   .content-app-midescripcion a {
     display: none;
   }
-}
-@media (max-width: 420px) {
 }
