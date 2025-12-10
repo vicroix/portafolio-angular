@@ -26,6 +26,7 @@ svg{
 }
 .container-contact{
   width: 90%;
+  margin-bottom: 1rem;
 }
 .content-contact{
   display: flex;

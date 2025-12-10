@@ -98,8 +98,13 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 920px) and (orientation: landscape){
   .content-app-midescripcion a {
+    display: none;
+  }
+}
+@media (max-width: 620px){
+    .content-app-midescripcion a {
     display: none;
   }
 }
