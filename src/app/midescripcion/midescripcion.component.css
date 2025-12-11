@@ -57,7 +57,12 @@
 .content-my-description-my-skills {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.75rem;
+}
+.content-my-description-my-skills div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 .container-my-description .app-mishabilidades-movile {
   display: none;

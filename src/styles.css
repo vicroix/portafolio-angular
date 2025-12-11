@@ -200,11 +200,11 @@ h1 {
   font-weight: bold;
 }
 h2 {
-  font-size: clamp(var(--font-size-xs), 2vw, var(--font-size-title-xs));
+  font-size: clamp(var(--font-size-xs), 5vw, var(--font-size-title-xs));
   font-weight: bold;
 }
 h3 {
-  font-size: clamp(var(--font-size-xs), 1.5vw, var(--font-size-subtitle));
+  font-size: clamp(var(--font-size-xs), 4vw, var(--font-size-subtitle-md));
   font-weight: bold;
 }
 h4 {
@@ -212,11 +212,11 @@ h4 {
   font-weight: bold;
 }
 p {
-  font-size: clamp(var(--font-size-2xs), 0.9vw, var(--font-size-sm));
+  font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-sm));
   margin: 0;
 }
 a {
-  font-size: clamp(var(--font-size-2xs), 1vw, var(--font-size-sm));
+  font-size: clamp(var(--font-size-2xs), 1.5vw, var(--font-size-sm));
 }
 li {
   font-size: clamp(var(--font-size-xs), 0.8vw, var(--font-size-body));
