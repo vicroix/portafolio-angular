@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-mishabilidades',
@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './mishabilidades.component.css'
 })
 export class MishabilidadesComponent {
-  styleSkills = 'flex justify-center bg-gray-300 p-2 m-2 rounded-lg hover:scale-102 cursor-default border-2 border-gray-400 group';
+  @Output() textoSkillsSeleccionado = new EventEmitter<string>();
+
+  enviarTechApp(event: Event){
+    const texto = (event.target as HTMLElement).innerText;
+    this.textoSkillsSeleccionado.emit(texto);
+  }
 }
+
+

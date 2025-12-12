@@ -16,22 +16,26 @@
               atractivas, funcionales y por supuesto centradas en el usuario.
             </p>
             <p>
-              Como persona, me esfuerzo cada día y le dedico tiempo al desarrollo,
-              aprendiendo continuamente para superarme y poder destacar, además de
-              convertirme en un desarrollador realmente útil. Por otro lado, en un
-              ámbito más personal, aunque me centro en aprender todo lo que soy
-              capaz de abarcar, me destaco y me siento más cómodo en el backend
+              Como persona, me esfuerzo cada día y le dedico tiempo al
+              desarrollo, aprendiendo continuamente para superarme y poder
+              destacar, además de convertirme en un desarrollador realmente
+              útil. Por otro lado, en un ámbito más personal, aunque me centro
+              en aprender todo lo que soy capaz de abarcar, me destaco y me
+              siento más cómodo en el backend
             </p>
           </div>
           <div>
             <app-mishabilidades
+              (textoSkillsSeleccionado)="enviarEventoAppComponent($event)"
               class="app-mishabilidades-pc"
-            ></app-mishabilidades>
+            >
+            </app-mishabilidades>
           </div>
         </div>
         <!-- Botón ir a proyectos -->
         <div>
           <a
+            id="button-resolution-high"
             href="#proyectos"
             class="view-proyects-button button-resolution-high"
             appearOnScroll
@@ -52,11 +56,15 @@
         </div>
       </div>
     </div>
-    <app-mishabilidades class="app-mishabilidades-movile"></app-mishabilidades>
+    <app-mishabilidades
+      (textoSkillsSeleccionado)="enviarEventoAppComponent($event)"
+      class="app-mishabilidades-movile"
+    ></app-mishabilidades>
   </div>
 
   <!-- Botón ir a proyectos -->
   <a
+    id="button-resolution-small"
     href="#proyectos"
     class="view-proyects-button button-resolution-small"
     appearOnScroll

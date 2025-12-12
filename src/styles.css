@@ -23,7 +23,6 @@ html {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: Inter, sans-serif;
   font-weight: normal;
 }
 body {
@@ -39,7 +38,7 @@ body {
     --foreground-hover: hsl(240, 5%, 20%);
     --foreground-active: hsl(240, 3%, 30%);
     --card: hsl(240, 10%, 98%);
-    --card-foreground: hsla(0, 0%, 99%, 0.877);
+    --card-foreground: hsla(262, 80%, 58%, 0.082);
     --popover: hsl(240, 10%, 98%);
     --popover-foreground: hsl(294, 17%, 66%);
 
@@ -127,99 +126,50 @@ body {
 
 /* Fuentes */
 @font-face {
-  font-family: "Inter";
-  src: url("./assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf")
-    format("truetype");
-  font-weight: 100 900;
-  font-stretch: 25% 100%;
+  font-family: "Josefinsans";
+  src: url("./assets/fonts/JosefinSans-Regular.ttf") format("truetype");
   font-style: normal;
 }
-
-/* Efectos de secuencias */
-
-@keyframes fadeSlide {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(-45px);
-  }
+@font-face {
+  font-family: "Alfaslabone";
+  src: url("./assets/fonts/ScienceGothic-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
 }
-
-@keyframes cambioColorFlecha {
-  0% {
-    fill: 0% 50%;
-  }
-  50% {
-    fill: 100% 50%;
-  }
-  100% {
-    fill: 0% 50%;
-  }
-}
-@keyframes cambioColorVolver {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes moverFlecha {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-20px);
-  }
-}
-
-/* Animación de fondo puntos morados */
-@keyframes pixelFloat {
-  0% {
-    transform: translateY(0) scale(0.8);
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-200vh) scale(1);
-    opacity: 0;
-  }
-}
-
 /* CSS General */
 h1 {
   font-size: clamp(var(--font-size-subtitle-md), 3vw, var(--font-size-title));
   font-weight: bold;
+  font-family: "Alfaslabone";
 }
 h2 {
   font-size: clamp(var(--font-size-xs), 5vw, var(--font-size-title-xs));
   font-weight: bold;
+  font-family: "Alfaslabone";
 }
 h3 {
   font-size: clamp(var(--font-size-xs), 4vw, var(--font-size-subtitle-md));
   font-weight: bold;
+  font-family: "Alfaslabone";
 }
 h4 {
   font-size: clamp(var(--font-size-xs), 1.5vw, var(--font-size-body));
   font-weight: bold;
+  font-family: "Alfaslabone";
 }
 p {
   font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-sm));
   margin: 0;
+  /* font-family: "Inter"; */
+  font-family: "Josefinsans";
 }
 a {
   font-size: clamp(var(--font-size-2xs), 1.5vw, var(--font-size-sm));
+  font-family: "Josefinsans";
 }
 li {
   font-size: clamp(var(--font-size-xs), 0.8vw, var(--font-size-body));
+  font-family: "Josefinsans";
 }
 
 /* Containers */
@@ -252,12 +202,6 @@ li {
     #f8dbff 80%,
     var(--background) 100%
   );
-  /* background: linear-gradient(
-    #ac8db6 0%,
-    #d1b0d8 10%,
-    #f8dbff 80%,
-    var(--background) 100%
-  ); */
   padding-right: clamp(3rem, 10vw, 5rem);
   padding-left: clamp(3rem, 10vw, 5rem);
 }
@@ -267,8 +211,6 @@ li {
   justify-content: center;
   align-items: center;
 }
-
-/* Botones */
 
 .image-card {
   width: 300px;

@@ -1,12 +1,29 @@
-<!-- <header class="fixed top-0 left-0 right-0 z-10 bg-white">
-  <div class="flex justify-center p-8">
-    <app-navbar></app-navbar>
-  </div>
-</header> -->
-
 <!-- Portada -->
-<section class="container-app-midescripcion">
-  <app-midescripcion></app-midescripcion>
+<section id="container-app-midescripcion" class="container-app-midescripcion">
+  <div id="container-tech-description" (click)="cerrarModal()">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      (click)="cerrarModal()"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M18 6L6 18M6 6l12 12"
+      />
+    </svg>
+    <div id="content-tech-description">
+      <p>
+        {{ description }}
+      </p>
+    </div>
+  </div>
+  <app-midescripcion
+    (recibidoEventoAppComponent)="abrirModal($event)"
+  ></app-midescripcion>
 </section>
 
 <!-- Sección de cartas proyectos -->
@@ -74,4 +91,3 @@
     </div>
   </div>
 </section>
-<!-- <app-footer></app-footer> -->
