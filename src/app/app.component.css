@@ -116,7 +116,6 @@ svg {
   border-radius: 50%;
   color: black;
 }
-
 #arrowCaruselRight svg {
   position: fixed;
   right: 1%;
@@ -132,7 +131,7 @@ svg {
   color: black;
 }
 
-@media (max-width: 1420px){
+@media (max-width: 1440px){
   #modalImg img {
   max-width: 100%;
 
