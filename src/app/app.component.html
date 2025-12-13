@@ -47,6 +47,7 @@
     <img [src]="'../assets/img/' + rutasImgModal[imagenActualIndex]" alt="" />
     <!-- Flecha izquierda -->
     <button
+      *ngIf="rutasImgModal.length > 1"
       id="arrowCaruselLeft"
       class="arrow-left button-carusel-arrow"
       (click)="anterior()"
@@ -66,6 +67,7 @@
 
     <!-- Flecha derecha -->
     <button
+      *ngIf="rutasImgModal.length > 1"
       id="arrowCaruselRight"
       class="arrow-right button-carusel-arrow"
       (click)="siguiente()"

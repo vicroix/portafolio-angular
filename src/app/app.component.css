@@ -90,8 +90,8 @@ svg {
   align-items: center;
 }
 #modalImg img {
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 85vw;
+  max-height: 85vh;
   object-fit: contain;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
