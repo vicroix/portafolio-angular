@@ -26,6 +26,65 @@
   ></app-midescripcion>
 </section>
 
+<!-- Modal imagenes de proyectos -->
+<div *ngIf="rutasImgModal.length > 0" id="modalImg">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    class="cerrar-modal-img"
+    (click)="cerrarModalImg()"
+  >
+    <path
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M18 6L6 18M6 6l12 12"
+    />
+  </svg>
+  <div>
+    <img [src]="'../assets/img/' + rutasImgModal[imagenActualIndex]" alt="" />
+    <!-- Flecha izquierda -->
+    <button
+      id="arrowCaruselLeft"
+      class="arrow-left button-carusel-arrow"
+      (click)="anterior()"
+    >
+      <!-- SVG flecha -->
+      <svg
+        class="svg-caruselArrow"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="m7.825 13l4.9 4.9q.3.3.288.7t-.313.7q-.3.275-.7.288t-.7-.288l-6.6-6.6q-.15-.15-.213-.325T4.426 12t.063-.375t.212-.325l6.6-6.6q.275-.275.688-.275t.712.275q.3.3.3.713t-.3.712L7.825 11H19q.425 0 .713.288T20 12t-.288.713T19 13z"
+        />
+      </svg>
+    </button>
+
+    <!-- Flecha derecha -->
+    <button
+      id="arrowCaruselRight"
+      class="arrow-right button-carusel-arrow"
+      (click)="siguiente()"
+    >
+      <!-- SVG flecha -->
+      <svg
+        class="svg-caruselArrow"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="M16.175 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.175l-4.9-4.9q-.3-.3-.288-.7t.313-.7q.3-.275.7-.288t.7.288l6.6 6.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-6.6 6.6q-.275.275-.687.275T11.3 19.3q-.3-.3-.3-.712t.3-.713z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+
 <!-- Sección de cartas proyectos -->
 <section class="container-proyects" appearOnScroll>
   <h2 id="proyectos">Mis proyectos</h2>

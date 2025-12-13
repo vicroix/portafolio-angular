@@ -136,6 +136,10 @@ body {
   font-style: normal;
   font-weight: bold;
 }
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
 /* CSS General */
 h1 {
   font-size: clamp(var(--font-size-subtitle-md), 3vw, var(--font-size-title));

@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MidescripcionComponent } from './midescripcion/midescripcion.component';
 import { CommonModule } from '@angular/common';
 import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive';
+import { AbrirModalImgService } from './abrir-modal-img.service';
 
 @Component({
   selector: 'app-root',
@@ -16,11 +17,18 @@ import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  constructor(private recibirRutasImgServ: AbrirModalImgService) {
+    this.recibirRutasImgServ.data$.subscribe((rutas) => {
+      this.rutasImgModal = rutas;
+      (document.querySelector('html') as HTMLElement).style.overflow = 'hidden';
+    });
+  }
   fontH1 = 'text-3xl font-bold';
   fontH2 = 'text-lg text-[20px] cambio-color-volver';
   title = 'Pagina_angular';
   description = '';
-
+  rutasImgModal: string[] = [];
+  imagenActualIndex: number = 0;
   // Abre un modal para definir las tecnologias en mi descripción
   abrirModal(texto: string) {
     const containerAppDescripcion = document.getElementById(
@@ -75,12 +83,12 @@ export class AppComponent {
       'content-tech-description'
     );
     containerTechDescription!.style.display = 'flex';
-    contentTechDescription!.style.display = "flex";
+    contentTechDescription!.style.display = 'flex';
     containerAppDescripcion!.classList.add('modal-background');
     (document.querySelector('html') as HTMLElement).style.overflow = 'hidden';
   }
-  
-// Cierra el modal
+
+  // Cierra el modal
   cerrarModal() {
     const containerTechDescription = document.getElementById(
       'container-tech-description'
@@ -94,6 +102,24 @@ export class AppComponent {
     containerTechDescription!.style.display = 'none';
     contentTechDescription!.style.display = 'none';
     containerAppDescripcion!.classList.remove('modal-background');
+    (document.querySelector('html') as HTMLElement).style.overflow = '';
+  }
+
+  siguiente() {
+    if (this.rutasImgModal.length === 0) return;
+    this.imagenActualIndex =
+      (this.imagenActualIndex + 1) % this.rutasImgModal.length;
+  }
+
+  anterior() {
+    if (this.rutasImgModal.length === 0) return;
+    this.imagenActualIndex =
+      (this.imagenActualIndex - 1 + this.rutasImgModal.length) %
+      this.rutasImgModal.length;
+  }
+
+  cerrarModalImg() {
+    this.rutasImgModal = [];
     (document.querySelector('html') as HTMLElement).style.overflow = '';
   }
 }

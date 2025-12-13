@@ -27,7 +27,7 @@
   </div>
 
   <div class="container-content-proyects">
-    <div class="container-imgs">
+    <div id="container-imgs">
       <!-- Imagen -->
       <div
         class="container-img"
@@ -38,6 +38,8 @@
           class="object-contain w-full h-full"
           [src]="'assets/img/' + img"
           [alt]="proyecto.titulo"
+          style="cursor:zoom-in;"
+          (click)="modal()"
         />
       </div>
 

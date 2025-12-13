@@ -30,10 +30,8 @@
   border-radius: 12px;
 }
 .button-back:hover {
-  /* translate: -5px 0px; */
   background-color: var(--primary-hover);
   box-shadow: 1px 1px 2px rgb(173, 151, 151);
-  /* transition: translate 0.3s ease-in-out; */
   color: aliceblue;
 }
 .container-content-proyects {
@@ -41,7 +39,7 @@
   flex-direction: column;
   gap: 1.5rem;
 }
-.container-imgs {
+#container-imgs {
   display: flex;
   justify-content: center;
   position: relative;

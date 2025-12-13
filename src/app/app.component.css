@@ -73,7 +73,68 @@ svg {
   height: 25px;
   cursor: pointer;
 }
-.no-scroll {
-  overflow: hidden !important;
-  height: 100vh !important;
+
+#modalImg {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+#modalImg > div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modalImg img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.cerrar-modal-img{
+  width: 50px;
+  position: absolute;
+  top: 1%;
+  right: 0;
+  cursor: pointer;
+}
+#arrowCaruselLeft svg {
+  position: fixed;
+  left: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: clamp(30px, 5vw, 45px);
+  height: clamp(30px, 5vw, 45px);
+  border: 1px solid rgba(196, 196, 196, 0.25);
+  background-color: rgba(196, 196, 196, 0.8);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: black;
+}
+
+#arrowCaruselRight svg {
+  position: fixed;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: clamp(30px, 5vw, 45px);
+  height: clamp(30px, 5vw, 45px);
+  border: 1px solid rgba(196, 196, 196, 0.25);
+  background-color: rgba(196, 196, 196, 0.8);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: black;
+}
+
+@media (max-width: 1420px){
+  #modalImg img {
+  max-width: 100%;
+
+}
 }
