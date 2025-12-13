@@ -1,31 +1,30 @@
 <!-- Portada -->
 <section id="container-app-midescripcion" class="container-app-midescripcion">
-  <div id="container-tech-description" (click)="cerrarModal()">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      (click)="cerrarModal()"
-    >
-      <path
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M18 6L6 18M6 6l12 12"
-      />
-    </svg>
-    <div id="content-tech-description">
-      <p>
-        {{ description }}
-      </p>
-    </div>
-  </div>
   <app-midescripcion
-    (recibidoEventoAppComponent)="abrirModal($event)"
+  (recibidoEventoAppComponent)="abrirModal($event)"
   ></app-midescripcion>
 </section>
-
+<div id="container-tech-description" (click)="cerrarModal()">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    (click)="cerrarModal()"
+  >
+    <path
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M18 6L6 18M6 6l12 12"
+    />
+  </svg>
+  <div id="content-tech-description">
+    <p>
+      {{ description }}
+    </p>
+  </div>
+</div>
 <!-- Modal imagenes de proyectos -->
 <div *ngIf="rutasImgModal.length > 0" id="modalImg">
   <svg
