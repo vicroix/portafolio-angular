@@ -4,6 +4,7 @@ import { MidescripcionComponent } from './midescripcion/midescripcion.component'
 import { CommonModule } from '@angular/common';
 import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive';
 import { AbrirModalImgService } from './abrir-modal-img.service';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +30,8 @@ export class AppComponent {
   description = '';
   rutasImgModal: string[] = [];
   imagenActualIndex: number = 0;
-  
+  abierto = false;
+
   // Abre un modal para definir las tecnologias en mi descripción
   abrirModal(texto: string) {
     switch (texto) {
@@ -80,11 +82,12 @@ export class AppComponent {
       'content-tech-description'
     );
     containerTechDescription!.style.display = 'flex';
-    contentTechDescription!.style.display = 'flex';
     containerTechDescription!.classList.add('modal-background');
     (document.querySelector('html') as HTMLElement).style.overflow = 'hidden';
+    setTimeout(() => {
+      contentTechDescription!.classList.add('show');
+    }, 300);
   }
-
   // Cierra el modal
   cerrarModal() {
     const containerTechDescription = document.getElementById(
@@ -96,10 +99,12 @@ export class AppComponent {
     const containerAppDescripcion = document.getElementById(
       'container-app-midescripcion'
     );
-    containerTechDescription!.style.display = 'none';
-    contentTechDescription!.style.display = 'none';
-    containerAppDescripcion!.classList.remove('modal-background');
-    (document.querySelector('html') as HTMLElement).style.overflow = '';
+    contentTechDescription!.classList.remove('show');
+    setTimeout(() => {
+      (document.querySelector('html') as HTMLElement).style.overflow = '';
+      containerTechDescription!.style.display = 'none';
+      containerAppDescripcion!.classList.remove('modal-background');
+    }, 300);
   }
 
   siguiente() {

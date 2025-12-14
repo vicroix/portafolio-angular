@@ -59,10 +59,19 @@ svg {
   padding: 0.75rem;
   top: 50%;
   max-width: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+  pointer-events: none;
+}
+#content-tech-description.show {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
 }
 .modal-background {
   background: rgba(0, 0, 0, 0.7);
-  /* min-height: 100vh; */
 }
 #container-tech-description svg {
   position: absolute;
@@ -93,7 +102,7 @@ svg {
   object-fit: contain;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-.cerrar-modal-img{
+.cerrar-modal-img {
   width: 50px;
   position: absolute;
   top: 1%;
@@ -129,9 +138,8 @@ svg {
   color: black;
 }
 
-@media (max-width: 1440px){
+@media (max-width: 1440px) {
   #modalImg img {
-  max-width: 100%;
-
-}
+    max-width: 100%;
+  }
 }
