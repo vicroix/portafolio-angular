@@ -92,7 +92,7 @@ export class AppComponent {
     (document.querySelector('html') as HTMLElement).style.overflow = 'hidden';
     setTimeout(() => {
       contentTechDescription!.classList.add('show');
-    }, 300);
+    }, 125);
   }
   // Cierra el modal
   cerrarModal() {
@@ -132,6 +132,6 @@ export class AppComponent {
     setTimeout(() => {
       this.rutasImgModal = [];
       document.documentElement.style.overflow = '';
-    }, 300);
+    }, 125);
   }
 }
