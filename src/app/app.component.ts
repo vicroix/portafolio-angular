@@ -26,7 +26,7 @@ export class AppComponent {
       setTimeout(() => {
         this.modalVisible = true;
         document.documentElement.style.overflow = 'hidden';
-      });
+      }, 150);
     });
   }
   fontH1 = 'text-3xl font-bold';
