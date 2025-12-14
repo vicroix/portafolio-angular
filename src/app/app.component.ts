@@ -4,7 +4,6 @@ import { MidescripcionComponent } from './midescripcion/midescripcion.component'
 import { CommonModule } from '@angular/common';
 import { AppearOnScrollDirective } from './directives/appear-on-scroll.directive';
 import { AbrirModalImgService } from './abrir-modal-img.service';
-import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-root',
