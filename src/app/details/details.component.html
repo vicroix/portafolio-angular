@@ -10,14 +10,15 @@
         width="15"
         height="15"
         viewBox="0 0 48 48"
-        class="cambio-color-flecha hover-mover-flecha"
         fill="currentColor"
       >
         <path
           d="M 34.470703 2.9863281 A 1.50015 1.50015 0 0 0 33.439453 3.4394531 L 13.939453 22.939453 A 1.50015 1.50015 0 0 0 13.939453 25.060547 L 33.439453 44.560547 A 1.50015 1.50015 0 1 0 35.560547 42.439453 L 17.121094 24 L 35.560547 5.5605469 A 1.50015 1.50015 0 0 0 34.470703 2.9863281 z"
         ></path>
       </svg>
-      <p [ngClass]="fontH2" class="cambio-color-volver">Volver</p>
+      <div>
+        <p [ngClass]="fontH2" class="cambio-color-volver">Volver</p>
+      </div>
     </a>
   </div>
 
@@ -29,21 +30,21 @@
   <div class="container-content-proyects">
     <div id="container-imgs">
       <!-- Imagen -->
-       <ng-container *ngIf="proyecto as p">
-         <div
-           class="container-img"
-           [style.transform]="'translateX(-' + indiceActual * 100 + '%)'"
-         >
-           <img
-             *ngFor="let img of p.imagen"
-             class="object-contain w-full h-full"
-             [src]="'assets/img/' + img"
-             [alt]="p.titulo"
-             style="cursor:zoom-in;"
-             (click)="modal()"
-           />
-         </div>
-       </ng-container>
+      <ng-container *ngIf="proyecto as p">
+        <div
+          class="container-img"
+          [style.transform]="'translateX(-' + indiceActual * 100 + '%)'"
+        >
+          <img
+            *ngFor="let img of p.imagen"
+            class="object-contain w-full h-full"
+            [src]="'assets/img/' + img"
+            [alt]="p.titulo"
+            style="cursor: zoom-in"
+            (click)="modal()"
+          />
+        </div>
+      </ng-container>
 
       <!-- Flecha izquierda -->
       <button
@@ -93,12 +94,9 @@
 
           <!-- LISTA -->
           <ul *ngSwitchCase="'lista-ordenada'" class="content-tech">
-            <p
-              *ngFor="let tecnologias of elemento.contenido"
-              class="text-tech"
-            >
+            <p *ngFor="let tecnologias of elemento.contenido" class="text-tech">
               {{ tecnologias }}
-          </p>
+            </p>
           </ul>
           <ol *ngSwitchCase="'lista-desordenada'" class="content-ol">
             <li *ngFor="let tecnologias of elemento.contenido">
