@@ -44,7 +44,7 @@
       d="M18 6L6 18M6 6l12 12"
     />
   </svg>
-  <div>
+  <div id="content-modal-img" [class.show]="modalVisible">
     <img [src]="'../assets/img/' + rutasImgModal[imagenActualIndex]" alt="" />
     <!-- Flecha izquierda -->
     <button

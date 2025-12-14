@@ -90,6 +90,17 @@ svg {
   background: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
+#content-modal-img{
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+#content-modal-img.show{
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
 #modalImg > div {
   position: relative;
   display: flex;

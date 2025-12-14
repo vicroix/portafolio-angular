@@ -18,10 +18,16 @@ import { timeout } from 'rxjs';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  modalVisible = false;
   constructor(private recibirRutasImgServ: AbrirModalImgService) {
     this.recibirRutasImgServ.data$.subscribe((rutas) => {
       this.rutasImgModal = rutas;
+      const contenedor = document.getElementById('content-modal-img');
       (document.querySelector('html') as HTMLElement).style.overflow = 'hidden';
+      setTimeout(() => {
+        this.modalVisible = true;
+        document.documentElement.style.overflow = 'hidden';
+      });
     });
   }
   fontH1 = 'text-3xl font-bold';
@@ -121,7 +127,11 @@ export class AppComponent {
   }
 
   cerrarModalImg() {
-    this.rutasImgModal = [];
-    (document.querySelector('html') as HTMLElement).style.overflow = '';
+    this.modalVisible = false;
+
+    setTimeout(() => {
+      this.rutasImgModal = [];
+      document.documentElement.style.overflow = '';
+    }, 300);
   }
 }
