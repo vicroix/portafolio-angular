@@ -162,7 +162,7 @@ h4 {
   font-family: "Alfaslabone";
 }
 p {
-  font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-sm));
+  font-size: clamp(var(--font-size-xs), 0.8vw, var(--font-size-sm));
   margin: 0;
   /* font-family: "Inter"; */
   font-family: "Josefinsans";
