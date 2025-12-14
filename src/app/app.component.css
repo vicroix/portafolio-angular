@@ -43,7 +43,7 @@ svg {
 #container-tech-description {
   position: fixed;
   inset: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.7);
