@@ -39,46 +39,57 @@ export class AppComponent {
 
   // Abre un modal para definir las tecnologias en mi descripción
   abrirModal(texto: string) {
-    switch (texto) {
-      case 'Angular':
-        this.description =
-          'Angular es una plataforma y framework de código abierto, mantenido por Google, para construir aplicaciones web modernas y escalables, especialmente Aplicaciones de una sola Página (SPA), utilizando HTML, CSS y TypeScript, destacando por su arquitectura basada en componentes, enlace de datos y un robusto conjunto de herramientas para el desarrollo frontend profesional.';
-        break;
-      case 'Node.js':
-        this.description =
-          'Node.js es un entorno de ejecución de JavaScript de código abierto y multiplataforma que permite ejecutar código JavaScript fuera del navegador.';
-        break;
-      case 'Express.js':
-        this.description =
-          'Express.js es un framework minimalista y flexible para Node.js que simplifica la creación de aplicaciones web y APIs robustas, ofreciendo un sistema de enrutamiento potente, manejo de middleware, gestión de peticiones HTTP (GET, POST, etc.), integración con motores de plantillas y manejo de errores, actuando como una capa de abstracción que acelera el desarrollo al encargarse de tareas comunes.';
-        break;
-      case 'TypeScript':
-        this.description =
-          'TypeScript (TS) es un lenguaje de programación de código abierto de Microsoft que es un superconjunto de JavaScript, añadiendo tipado estático opcional para facilitar el desarrollo de aplicaciones grandes y complejas, detectando errores antes de la ejecución y mejorando la organización del código, y que se compila (transpila) a JavaScript puro para que funcione en cualquier entorno, desde navegadores hasta Node.js.';
-        break;
-      case 'JavaScript':
-        this.description =
-          'JavaScript (JS) es un lenguaje de programación fundamental en la web que añade interactividad y dinamismo a las páginas, trabajando junto a HTML (estructura) y CSS (estilo) para crear sitios web y aplicaciones ricas y funcionales, desde formularios y galerías hasta juegos y aplicaciones del lado del servidor (Node.js).';
-        break;
-      case 'TailwindCSS':
-        this.description =
-          'Tailwind CSS es un framework CSS que proporciona clases predefinidas de bajo nivel directamente en tu HTML, permitiéndote construir interfaces personalizadas rápidamente sin escribir CSS desde cero, a diferencia de frameworks como Bootstrap que ofrecen componentes completos.';
-        break;
-      case 'Bootstrap':
-        this.description =
-          'Bootstrap es un framework gratuito y de código abierto para desarrollo web, que combina HTML, CSS y JavaScript para crear sitios web y aplicaciones responsive (adaptables a cualquier dispositivo) de forma rápida y eficiente, ofreciendo componentes preconstruidos como botones, menús y formularios, y un sistema de rejilla para diseños flexibles.';
-        break;
-      case 'MySQL':
-        this.description =
-          'MySQL es un Sistema de Gestión de Bases de Datos Relacionales (RDBMS) de código abierto, muy popular y usado mundialmente, que permite a usuarios y aplicaciones almacenar, gestionar y recuperar datos organizados en tablas (con filas y columnas) utilizando el lenguaje SQL.';
-        break;
-      case 'PHP':
-        this.description =
-          'PHP (PHP: Hypertext Preprocessor) es un lenguaje de programación de código abierto, de scripting y del lado del servidor, ideal para desarrollo web, que permite crear páginas y aplicaciones web dinámicas al integrarse con HTML y interactuar con bases de datos.';
-        break;
-      default:
-        break;
-    }
+   switch (texto) {
+  case 'Angular':
+    this.description =
+      'Angular es un framework que te ayuda a crear aplicaciones web grandes y bien organizadas. Está pensado para proyectos serios y escalables, usando componentes y TypeScript para mantener el código ordenado y fácil de mantener a largo plazo.';
+    break;
+
+  case 'Node.js':
+    this.description =
+      'Node.js permite ejecutar JavaScript fuera del navegador, normalmente en el servidor. Gracias a esto puedes crear backends, APIs o servicios completos usando el mismo lenguaje que en el frontend.';
+    break;
+
+  case 'Express.js':
+    this.description =
+      'Express.js es un framework que se usa junto a Node.js para crear servidores y APIs de forma rápida y sencilla. Se encarga de gestionar rutas, peticiones HTTP y middleware, quitándote mucho trabajo repetitivo.';
+    break;
+
+  case 'TypeScript':
+    this.description =
+      'TypeScript es JavaScript con superpoderes. Añade tipos para ayudarte a detectar errores antes de ejecutar la aplicación, algo especialmente útil cuando el proyecto crece y el código se vuelve más complejo.';
+    break;
+
+  case 'JavaScript':
+    this.description =
+      'JavaScript es el lenguaje que da vida a las páginas web. Se encarga de la lógica y la interacción, permitiendo desde animaciones y formularios hasta aplicaciones completas tanto en frontend como en backend.';
+    break;
+
+  case 'TailwindCSS':
+    this.description =
+      'Tailwind CSS es un framework que te permite diseñar directamente desde el HTML usando clases pequeñas y reutilizables. Es muy flexible y te da control total sobre el diseño sin depender de componentes prefabricados.';
+    break;
+
+  case 'Bootstrap':
+    this.description =
+      'Bootstrap es un framework que facilita crear interfaces responsive rápidamente, ofreciendo componentes listos para usar como botones, formularios y menús, además de un sistema de rejilla para organizar el diseño.';
+    break;
+
+  case 'MySQL':
+    this.description =
+      'MySQL es una base de datos relacional muy utilizada para guardar y gestionar información de aplicaciones. Organiza los datos en tablas y permite consultarlos fácilmente mediante SQL.';
+    break;
+
+  case 'PHP':
+    this.description =
+      'PHP es un lenguaje pensado para el desarrollo web en el servidor. Se usa mucho para generar páginas dinámicas y conectar aplicaciones con bases de datos de forma sencilla.';
+    break;
+
+  default:
+    this.description = '';
+    break;
+}
+
     // Hago aparecer el modal del contenedor y el contenido
     const containerTechDescription = document.getElementById(
       'container-tech-description'
