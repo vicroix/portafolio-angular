@@ -29,12 +29,9 @@ export class AppComponent {
   description = '';
   rutasImgModal: string[] = [];
   imagenActualIndex: number = 0;
+  
   // Abre un modal para definir las tecnologias en mi descripción
   abrirModal(texto: string) {
-    const containerAppDescripcion = document.getElementById(
-      'container-app-midescripcion'
-    );
-    console.log(`Mi texto recibido: ${texto}`);
     switch (texto) {
       case 'Angular':
         this.description =
@@ -84,7 +81,7 @@ export class AppComponent {
     );
     containerTechDescription!.style.display = 'flex';
     contentTechDescription!.style.display = 'flex';
-    containerAppDescripcion!.classList.add('modal-background');
+    containerTechDescription!.classList.add('modal-background');
     (document.querySelector('html') as HTMLElement).style.overflow = 'hidden';
   }
 

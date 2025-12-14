@@ -25,7 +25,6 @@ export class HomeComponent {
   cargarCartas(): void{
     this.http.get<any[]>('/assets/cartaProyectos.json').subscribe((cartas)=>{
       this.cartas = cartas;
-      console.log("cartas", cartas);
     })
     }
 }

@@ -4,7 +4,8 @@
   (recibidoEventoAppComponent)="abrirModal($event)"
   ></app-midescripcion>
 </section>
-<div id="container-tech-description" (click)="cerrarModal()">
+<!-- Modal información tecnologias -->
+<div id="container-tech-description">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -25,6 +26,7 @@
     </p>
   </div>
 </div>
+
 <!-- Modal imagenes de proyectos -->
 <div *ngIf="rutasImgModal.length > 0" id="modalImg">
   <svg

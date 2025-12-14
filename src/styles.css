@@ -200,14 +200,14 @@ li {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding-right: clamp(3rem, 10vw, 5rem);
+  padding-left: clamp(3rem, 10vw, 5rem);
   background: linear-gradient(
     #e4caec 0%,
     #dac7df 10%,
     #f8dbff 80%,
     var(--background) 100%
   );
-  padding-right: clamp(3rem, 10vw, 5rem);
-  padding-left: clamp(3rem, 10vw, 5rem);
 }
 .container-proyects {
   display: flex;

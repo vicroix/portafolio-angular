@@ -62,14 +62,13 @@ svg {
 }
 .modal-background {
   background: rgba(0, 0, 0, 0.7);
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 #container-tech-description svg {
   position: absolute;
   right: 1%;
   top: 2%;
-  width: 25px;
-  height: 25px;
+  width: 50px;
   cursor: pointer;
 }
 

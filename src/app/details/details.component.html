@@ -29,19 +29,21 @@
   <div class="container-content-proyects">
     <div id="container-imgs">
       <!-- Imagen -->
-      <div
-        class="container-img"
-        [style.transform]="'translateX(-' + indiceActual * 100 + '%)'"
-      >
-        <img
-          *ngFor="let img of proyecto.imagen"
-          class="object-contain w-full h-full"
-          [src]="'assets/img/' + img"
-          [alt]="proyecto.titulo"
-          style="cursor:zoom-in;"
-          (click)="modal()"
-        />
-      </div>
+       <ng-container *ngIf="proyecto as p">
+         <div
+           class="container-img"
+           [style.transform]="'translateX(-' + indiceActual * 100 + '%)'"
+         >
+           <img
+             *ngFor="let img of p.imagen"
+             class="object-contain w-full h-full"
+             [src]="'assets/img/' + img"
+             [alt]="p.titulo"
+             style="cursor:zoom-in;"
+             (click)="modal()"
+           />
+         </div>
+       </ng-container>
 
       <!-- Flecha izquierda -->
       <button
