@@ -2,16 +2,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.25rem;
-  max-width: 420px;
+  gap: 0.75rem;
+  max-width: 440px;
   min-width: 300px;
   height: 460px;
   background-color: var(--card-foreground);
   border-radius: 12px;
   box-shadow: 0 1px 8px rgb(187, 187, 187);
 }
-.content-img{
-  max-width: 420px;
+.content-img {
+  max-width: 440px;
 }
 .content-img img {
   width: 100%;
@@ -43,9 +43,19 @@
 }
 
 /* Responsive */
-
-@media (max-width: 720px) {
+@media (max-width: 1820px) {
   .cards {
-    height: 460px;
+    height: 410px;
+  }
+}
+@media (max-width: 1350px) {
+  .cards {
+    height: 400px;
+  }
+}
+@media (max-width: 1350px) {
+  .content-img img {
+    object-fit: fill;
+    height: 200px;
   }
 }
