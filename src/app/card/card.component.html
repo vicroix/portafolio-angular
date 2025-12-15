@@ -2,17 +2,17 @@
   class="cards"
   appearOnScroll
 >
+<div class="content-img">
   <img
     [src]="'/assets/img/' + imageSrc"
     [alt]="getTitle"
     appearOnScroll
   />
-
+</div>
   <!-- Resumen del proyecto -->
   <app-card-content
     [descripcion]="descripcion"
     [getTitle]="getTitle"
   ></app-card-content>
-
   <app-card-footer [id]="id" [href]="href"></app-card-footer>
 </div>
