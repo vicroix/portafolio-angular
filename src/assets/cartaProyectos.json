@@ -47,5 +47,12 @@
     "getTitle": "Portafolio v2",
     "descripcion": "Nuevo diseño del portafolio más moderno y atractivo, mejor estructurado y modularizado, y un mejor responsive para todos los dispositivos.",
     "href": "https://github.com/vicroix/portafolio-angular"
+  },
+  {
+    "id": 8,
+    "imageSrc": "home.png",
+    "getTitle": "Gestión de Bookings y Guests",
+    "descripcion": "CRUD Full-Stack desarrollado con Laravel + Vue.js, integrando una API robusta con una interfaz dinámica y reactiva.",
+    "href": "https://github.com/vicroix/test-minty-2026"
   }
 ]

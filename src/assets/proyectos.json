@@ -454,5 +454,62 @@
     ],
     "imagen": ["NuevoDiseñoPortafolio.jpg", "portafolioProyectos.jpg", "portafolioDetalles.jpg"],
     "enlace": "https://github.com/vicroix/portafolio-angular"
-  }
+  },
+{
+  "id": "8",
+  "titulo": "Gestión de Bookings y Guests (Prueba Técnica)",
+  "descripcion": [
+    {
+      "tipo": "titulo",
+      "contenido": "Tecnologías principales:"
+    },
+    {
+      "tipo": "lista-ordenada",
+      "contenido": ["Laravel", "Vue 3", "Inertia.js", "Pinia", "Tailwind CSS"]
+    },
+    {
+      "tipo": "titulo",
+      "contenido": "Entorno de desarrollo:"
+    },
+    {
+      "tipo": "lista-ordenada",
+      "contenido": ["PHP 8", "Node.js", "Vite", "npm", "VS Code", "Git"]
+    },
+    {
+      "tipo": "titulo",
+      "contenido": "Detalles del Proyecto"
+    },
+    {
+      "tipo": "parrafo",
+      "contenido": "Desarrollé una aplicación web para la gestión de reservas (bookings) y sus huéspedes asociados (guests), como parte de una prueba técnica para una posición junior. La aplicación permite visualizar bookings, crear, editar y eliminar guests vinculados a cada reserva, manteniendo una estructura clara y una experiencia de usuario sencilla."
+    },
+    {
+      "tipo": "titulo",
+      "contenido": "Decisiones de arquitectura y UX"
+    },
+    {
+      "tipo": "parrafo",
+      "contenido": "Opté por mostrar la gestión de guests dentro de cada booking para evitar navegación innecesaria y reducir la carga cognitiva del usuario. Implementé un modal reutilizable para crear y editar guests, evitando duplicación de código y mejorando la mantenibilidad. La comunicación frontend-backend se realiza mediante endpoints REST en Laravel, gestionando el estado global con Pinia."
+    },
+    {
+      "tipo": "titulo",
+      "contenido": "Validaciones y gestión de estado"
+    },
+    {
+      "tipo": "parrafo",
+      "contenido": "Apliqué validaciones tanto en frontend como en backend para garantizar integridad de datos y una mejor experiencia de usuario. En el frontend se proporciona feedback inmediato, mientras que el backend asegura reglas de negocio y consistencia. Implementé estados de carga visibles para informar al usuario durante las operaciones asíncronas."
+    },
+    {
+      "tipo": "titulo",
+      "contenido": "Aprendizajes y mejoras futuras"
+    },
+    {
+      "tipo": "parrafo",
+      "contenido": "Este proyecto me permitió afianzar conceptos como la separación de responsabilidades entre frontend y backend, la gestión de estado en aplicaciones Vue y el uso de componentes reutilizables. Como mejoras futuras, añadiría funcionalidades como búsqueda, filtros y paginación, así como una gestión más avanzada de errores y feedback al usuario."
+    }
+  ],
+ "imagen": ["home.png", "modal addGuest.png", "modal editGuest.png"],
+  "enlace": "https://github.com/vicroix/test-minty-2026"
+}
+
 ]
